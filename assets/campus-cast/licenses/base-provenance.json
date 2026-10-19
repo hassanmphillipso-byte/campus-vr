@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/hinzka/52blendshapes-for-VRoid-face",
+  "commit": "756f5abab7d2295ad5b5dbc2cd86972c388c48d2",
+  "retrieved": "2026-10-07",
+  "files": {
+    "Male.vrm": "7526838f4a45086a1d0abb23e9f38ad3f0103889f1efa70d2605ef25e7e6ef99",
+    "Female.vrm": "36d6d242999d580bd0d3bcd8656bb2d4d5d4839f187d8198226bda905e1d9114"
+  },
+  "notice": "VRM embedded metadata says Redistribution_Prohibited; current author README explicitly permits modification and redistribution. Keep current README and pixiv conditions; do not claim CC0."
+}

@@ -1,0 +1,30 @@
+{
+  "source": "js/construction/models.js",
+  "sha256": "979fb4d0052875b5f8e445b1c3281b4ab6e88cad33a2222377f0b19cfb25e768",
+  "catalogSource": "js/construction/catalog.js",
+  "catalogSha256": "76b35c07408338f9a2e6495bc51d5985bdfc286064d33e11cffa249b728ec78e",
+  "imageSha256": {
+    "cinema.png": "190c98bd4e3b0bc8fa5415387fd2b859053bde4fcc511c91fa91c92e85e14977",
+    "music.png": "efe3a71a3e6d6870aa51ad8ab495626aa5def463a112e93b90bea63630215882",
+    "pool.png": "fc34bb83c5eb5548c9817cd0ac39ec244eaab794ac5654f528ba595275f3f5d5",
+    "gym.png": "77e9bf078f8e3de007d5b3f2c4229046cf991fbb0cd32ddd0d95003a657e0134",
+    "tennis.png": "a1d4779049848294d6f862ec67ed45a9b2b7083af0fe2000bbc200f2d7e3f9a2",
+    "basketball.png": "72b9d519179a669f535a8dcfa005e6a9246ce312cff0493a029286fd8c515062",
+    "classroom.png": "64393d8fd4a0edeb2a35cbef8abb0834f6ffec4e00646ed5cb3c70bc81854723"
+  },
+  "batchSource": "js/construction/batch.js",
+  "batchSha256": "de0be385f677769e47e25d6cc3548f8b6720014ec675439de9a91623bc7c3e9c",
+  "size": [
+    720,
+    400
+  ],
+  "files": [
+    "cinema.png",
+    "music.png",
+    "pool.png",
+    "gym.png",
+    "tennis.png",
+    "basketball.png",
+    "classroom.png"
+  ]
+}

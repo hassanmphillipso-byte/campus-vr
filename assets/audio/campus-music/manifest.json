@@ -1,0 +1,423 @@
+{
+  "version": 1,
+  "targetLufs": -23,
+  "crossfadeSeconds": 2.4,
+  "tracks": [
+    {
+      "id": "easy-lemon",
+      "title": "Easy Lemon",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200076",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "easy-lemon.bgm",
+      "seconds": 125.857959,
+      "bytes": 2014623,
+      "sha256": "5050415ff25799406085254abaf1e4ffdf03509b8b9664fde8c924b75b56328b",
+      "lufs": -23.44,
+      "truePeakDb": -7.73,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "clear-air",
+      "title": "Clear Air",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "clear-air.bgm",
+      "seconds": 183.719184,
+      "bytes": 2940429,
+      "sha256": "41c35124dad155941485b9679a35051ac5a714086040bdc767ce6bb2de7c3b82",
+      "lufs": -23.45,
+      "truePeakDb": -6.64,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "carefree",
+      "title": "Carefree",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400037",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "carefree.bgm",
+      "seconds": 204.408163,
+      "bytes": 3271480,
+      "sha256": "69f5204540e37d690cda8374f5ddafc813ee6eece9f8d6d49e13c35df2ba3f47",
+      "lufs": -23.44,
+      "truePeakDb": -6.48,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "life-of-riley",
+      "title": "Life of Riley",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400054",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "life-of-riley.bgm",
+      "seconds": 233.06449,
+      "bytes": 3729925,
+      "sha256": "08b2d94dbd418e37e565591dc1d12623dcf10e6bf961e164664aaf5a1436668f",
+      "lufs": -23.43,
+      "truePeakDb": -8.49,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "dream-culture",
+      "title": "Dream Culture",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300046",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "dream-culture.bgm",
+      "seconds": 211.382857,
+      "bytes": 3383048,
+      "sha256": "92d7e9b94158ee82825cdbfb5251908df527377780569feff136fe0cb4653ee7",
+      "lufs": -23.45,
+      "truePeakDb": -7.02,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "local-forecast-slower",
+      "title": "Local Forecast - Slower",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300011",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "local-forecast-slower.bgm",
+      "seconds": 199.497143,
+      "bytes": 3192850,
+      "sha256": "797369997de20b47f4dbe22a9e592daccb5dd6f257fb8ff43aee128f735212b6",
+      "lufs": -23.44,
+      "truePeakDb": -11.83,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "wallpaper",
+      "title": "Wallpaper",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100843",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "wallpaper.bgm",
+      "seconds": 213.65551,
+      "bytes": 3419376,
+      "sha256": "b1f1e5807336ff28d4bc9fe2e5f88531e1b10c3dda56abf29051c55806892458",
+      "lufs": -23.44,
+      "truePeakDb": -10.6,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "electrodoodle",
+      "title": "Electrodoodle",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200079",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "electrodoodle.bgm",
+      "seconds": 165.694694,
+      "bytes": 2652015,
+      "sha256": "d03dbf80dfcb2843ee342072e0588d78d98d508a06ceb9b4b4bceb5e5b6f86bb",
+      "lufs": -23.44,
+      "truePeakDb": -12.78,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "cipher",
+      "title": "Cipher",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "cipher.bgm",
+      "seconds": 226.35102,
+      "bytes": 3622530,
+      "sha256": "dd59ee25171b1ed9f5a9c659d120fbe6ac0bf44e04fda6d9ee08d12fbdfec144",
+      "lufs": -23.46,
+      "truePeakDb": -6.98,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "beachfront-celebration",
+      "title": "Beachfront Celebration",
+      "author": "Kevin MacLeod",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200022",
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "beachfront-celebration.bgm",
+      "seconds": 185.025306,
+      "bytes": 2961313,
+      "sha256": "e6b0a5883472049d7b64fd982866e8df3240f46ff61b6775eea4562735c82574",
+      "lufs": -23.43,
+      "truePeakDb": -13.39,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "sherwood",
+      "title": "Sherwood",
+      "author": "zesona / Chris Murphy",
+      "source": "https://opengameart.org/content/sherwood",
+      "license": "CC0 · 无强制署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "sherwood.bgm",
+      "seconds": 30.537143,
+      "bytes": 489061,
+      "sha256": "8d1ca1e70c38f9fa5efea9be56d64be59127e334db91990edcafa2e810dcc8e3",
+      "lufs": -23.26,
+      "truePeakDb": -7.88,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化；裁掉含长停顿的前4.2秒引子"
+    },
+    {
+      "id": "where-was-i",
+      "title": "Where was I?",
+      "author": "yd",
+      "source": "https://opengameart.org/content/where-was-i",
+      "license": "CC0 · 无强制署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "where-was-i.bgm",
+      "seconds": 68.205714,
+      "bytes": 1091758,
+      "sha256": "ea8fa3c4ef6880b8cae00079cee9ffe435a451f1088c15fc9ef45cc2677f1e7d",
+      "lufs": -23.47,
+      "truePeakDb": -8.9,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "revelation",
+      "title": "Revelation",
+      "author": "Indieteur",
+      "source": "https://opengameart.org/content/revelation",
+      "license": "CC0 · 无强制署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "revelation.bgm",
+      "seconds": 82.938776,
+      "bytes": 1327603,
+      "sha256": "0d3921fdce478c7abbf5e4bfe0242e921746fd90ee523b7cd7341cb1703868b0",
+      "lufs": -23.47,
+      "truePeakDb": -6.79,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "morning",
+      "title": "Morning",
+      "author": "しゃろう / Sharou",
+      "source": "https://opentracks.com/bgm/detail/2445",
+      "license": "OpenTracks素材许可 · 以曲页和作者条件为准",
+      "licenseUrl": "https://opentracks.com/help/articles/license/",
+      "file": "morning.bgm",
+      "seconds": 73.221224,
+      "bytes": 1172087,
+      "sha256": "1f87e1c5113c2ea81f7cd25e413447866ef7d15625c6da253d59bb0219d9cdbd",
+      "lufs": -23.43,
+      "truePeakDb": -12.55,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化",
+      "officialTrack": 2
+    },
+    {
+      "id": "afternoon",
+      "title": "昼下がり気分",
+      "author": "KK",
+      "source": "https://opentracks.com/bgm/detail/4695",
+      "license": "OpenTracks素材许可 · 以曲页和作者条件为准",
+      "licenseUrl": "https://opentracks.com/help/articles/license/",
+      "file": "afternoon.bgm",
+      "seconds": 235.206531,
+      "bytes": 3773548,
+      "sha256": "3208ce3c5318dcdd5951afa96bb3e38119a72c863b5f8b4f0c80446607b030ee",
+      "lufs": -23.43,
+      "truePeakDb": -9.25,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化",
+      "officialTrack": 1
+    },
+    {
+      "id": "summer-triangle",
+      "title": "SUMMER TRIANGLE",
+      "author": "しゃろう / Sharou",
+      "source": "https://opentracks.com/bgm/detail/12983",
+      "license": "OpenTracks素材许可 · 以曲页和作者条件为准",
+      "licenseUrl": "https://opentracks.com/help/articles/license/",
+      "file": "summer-triangle.bgm",
+      "seconds": 127.451429,
+      "bytes": 2039766,
+      "sha256": "98917c02ac139bd042ff62ebf57a0b964c386e55aad6ba47133e8536875e8106",
+      "lufs": -23.42,
+      "truePeakDb": -11.04,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化",
+      "officialTrack": 1
+    },
+    {
+      "id": "sci-fi-puzzle",
+      "title": "Sci-fi Puzzle In-Game 1",
+      "author": "MintoDog",
+      "source": "https://opengameart.org/content/sci-fi-puzzle-in-game-1",
+      "license": "CC0 · 保留作者署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "sci-fi-puzzle.bgm",
+      "seconds": 139.128163,
+      "bytes": 2226603,
+      "sha256": "a0cd7942dd22b06e363b122108399ddbdca0762320dfebcad14cc73b8060366b",
+      "lufs": -23.43,
+      "truePeakDb": -11.75,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化"
+    },
+    {
+      "id": "space-shooter",
+      "title": "Space Shooter (Loop)",
+      "author": "Alex McCulloch / Pro Sensory",
+      "source": "https://opengameart.org/content/space-shooter-loop",
+      "license": "CC0 · 保留作者署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "space-shooter.bgm",
+      "seconds": 82.233469,
+      "bytes": 1316202,
+      "sha256": "d7833dc0634f087074838b5e04132daf78c4a03be664b6d54a4d1278411fb055",
+      "lufs": -23.47,
+      "truePeakDb": -14.3,
+      "modified": "响度统一、仅首尾近静音修整、MP3转码及游戏资源封装；运行时交叉淡化；动态压缩柔化瞬间峰值"
+    }
+  ],
+  "playlists": {
+    "campus": {
+      "label": "校园漫游",
+      "tracks": [
+        "morning",
+        "carefree",
+        "where-was-i",
+        "life-of-riley"
+      ]
+    },
+    "corridor": {
+      "label": "课间走廊",
+      "tracks": [
+        "afternoon",
+        "life-of-riley",
+        "morning"
+      ]
+    },
+    "classroom": {
+      "label": "教室学习",
+      "tracks": [
+        "easy-lemon",
+        "local-forecast-slower",
+        "sherwood",
+        "wallpaper"
+      ]
+    },
+    "reading": {
+      "label": "资料与考核",
+      "tracks": [
+        "clear-air",
+        "revelation",
+        "sherwood"
+      ]
+    },
+    "pool": {
+      "label": "泳馆观察",
+      "tracks": [
+        "dream-culture",
+        "clear-air",
+        "revelation"
+      ],
+      "gain": 0.65
+    },
+    "sports": {
+      "label": "体育训练",
+      "tracks": [
+        "electrodoodle",
+        "cipher",
+        "summer-triangle",
+        "beachfront-celebration"
+      ],
+      "gain": 0.7
+    },
+    "celebration": {
+      "label": "运动会与结业",
+      "tracks": [
+        "summer-triangle",
+        "beachfront-celebration",
+        "life-of-riley"
+      ]
+    },
+    "adventure": {
+      "label": "基地探索",
+      "tracks": [
+        "where-was-i",
+        "sherwood"
+      ],
+      "gain": 0.75
+    },
+    "adventure-blocks": {
+      "label": "能源桥 · 知识方块",
+      "tracks": [
+        "sci-fi-puzzle",
+        "sherwood"
+      ],
+      "gain": 0.6
+    },
+    "adventure-fighter": {
+      "label": "编程战机 · 护航",
+      "tracks": [
+        "space-shooter",
+        "electrodoodle"
+      ],
+      "gain": 0.8
+    },
+    "sports-rhythm": {
+      "label": "跳绳轻背景",
+      "tracks": [
+        "electrodoodle",
+        "cipher"
+      ],
+      "gain": 0.4
+    },
+    "campus-dawn": {
+      "label": "清晨校园",
+      "tracks": [
+        "morning",
+        "clear-air"
+      ]
+    },
+    "campus-day": {
+      "label": "日间校园",
+      "tracks": [
+        "carefree",
+        "life-of-riley",
+        "where-was-i"
+      ]
+    },
+    "campus-noon": {
+      "label": "午间校园",
+      "tracks": [
+        "afternoon",
+        "easy-lemon"
+      ]
+    },
+    "campus-dusk": {
+      "label": "黄昏校园",
+      "tracks": [
+        "local-forecast-slower",
+        "wallpaper"
+      ]
+    },
+    "campus-night": {
+      "label": "夜晚校园",
+      "tracks": [
+        "sherwood",
+        "dream-culture"
+      ],
+      "gain": 0.5
+    },
+    "campus-deep": {
+      "label": "深夜 · 自然声景",
+      "tracks": []
+    },
+    "campus-rain": {
+      "label": "雨中校园",
+      "tracks": [
+        "revelation",
+        "cipher"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+#sportsLaunch{position:fixed;right:16px;bottom:24px;z-index:30;border:1px solid #ffffff60;border-radius:24px;background:#102a38;color:#fff;padding:12px 19px;font:700 14px system-ui;cursor:pointer}
+#sportsPlay{position:fixed;left:18px;bottom:26px;width:310px;max-height:75vh;overflow:auto;box-sizing:border-box;z-index:35;padding:18px;background:#102532f2;border:1px solid #ffffff36;border-radius:18px;color:#eff8fb;font:14px/1.5 system-ui;box-shadow:0 12px 40px #0005;backdrop-filter:blur(12px)}
+#sportsPlay[hidden],#sportsLaunch[hidden]{display:none}#sportsPlay h2{font-size:21px;margin:0 0 8px}#sportsPlay p{margin:8px 0;color:#c2d1d9}#sportsPlay .eyebrow{color:#7fdbc3;font-size:11px;letter-spacing:2px}#sportsPlay button,#sportsPlay select{font:inherit;cursor:pointer;border-radius:9px;border:1px solid #ffffff40;background:#223e4c;color:white;padding:9px 11px;touch-action:none}#sportsPlay button:disabled{opacity:.4;cursor:default}#sportsPlay .row{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}#sportsPlay .row>*{flex:1}#sportsPlay .primary{background:#93ebcc;color:#102c29;font-weight:750;border:0}#sportsPlay .quiet{background:transparent;color:#bac9d1}#sportsPlay label{display:block;margin-top:12px}#sportsPlay select{width:100%;margin-top:4px}#sportsPlay .score{font-size:28px;font-weight:800;line-height:1.2;margin:12px 0 4px;font-variant-numeric:tabular-nums}#sportsPlay .meter{height:12px;background:#ffffff20;border-radius:8px;position:relative;margin:12px 0;overflow:hidden}#sportsPlay .zone{position:absolute;top:0;bottom:0;left:55%;width:19%;background:#93ebcc66}#sportsPlay .fill{height:100%;background:#ffcc69;width:0;position:relative}#sportsPlay .notice{min-height:42px;color:#ffe2a5}#sportsPlay .history{display:flex;gap:8px;margin:10px 0}#sportsPlay .history span{width:30px;height:30px;display:grid;place-items:center;border:1px solid #ffffff40;border-radius:50%}#sportsPlay .hit{background:#54ac8e;color:#fff}#sportsPlay .miss{background:#734c48;color:#fff}#sportsPlay .action{width:100%;padding:16px;margin-top:10px;font-size:16px;user-select:none;-webkit-user-select:none}#sportsPlay small{color:#a8bec9}#sportsPlay .best{font-size:12px;color:#9ddbc8}#sportsCrosshair{pointer-events:none;position:fixed;left:50%;top:50%;width:14px;height:14px;border:2px solid #fff9;border-radius:50%;transform:translate(-50%,-50%);z-index:20}#sportsCrosshair[hidden]{display:none}
+@media(max-width:600px){#sportsPlay{left:10px;bottom:10px;width:calc(100% - 20px);max-height:40vh;padding:12px 15px}#sportsPlay h2{font-size:18px}#sportsPlay .score{font-size:23px;margin:4px 0}#sportsPlay p{font-size:12px;margin:4px 0}#sportsPlay .action{padding:12px;margin-top:5px}#sportsPlay .row{margin-top:6px}#sportsPlay .notice{min-height:24px}#sportsPlay .meter{margin:7px 0}#sportsLaunch{bottom:16px;right:12px}#sportsPlay .history{margin:5px 0}#sportsPlay .history span{height:24px;width:24px}}
+
+@media(max-width:600px){#sportsPlay[data-sport="rope"],#sportsPlay[data-sport="freerope"]{top:12px;bottom:auto;max-height:44vh;z-index:80}}
+
+/* 跳绳 · 自由节奏：绳速滑条行 */
+#sportsPlay .rpmRow{display:flex;align-items:center;gap:8px;margin:10px 0 0;font-size:13px;color:#c2d1d9}
+#sportsPlay .rpmRow input[type=range]{flex:1;accent-color:#ff9a3c;min-height:28px}
+#sportsPlay .rpmRow span{font-variant-numeric:tabular-nums;min-width:64px;text-align:right;color:#ffd9a8}
+
+body:has(#sportsPlay:not([hidden])) #castOptions{visibility:hidden}
+
+/* Compact controls leave the ball, lane and body visible above the action dock. */
+#sportsPlay .aimControls{display:flex;gap:8px;justify-content:center;margin:8px 0}
+#sportsPlay .aimControls button{min-width:48px;min-height:44px;font-size:20px}
+#sportsPlay .autoNext{display:flex;align-items:center;gap:6px;font-size:13px;margin:10px 0 0}
+#sportsPlay .autoNext input{width:20px;height:20px;accent-color:#93ebcc}
+#sportsPlay .sportSteps{padding-left:22px;line-height:1.8}
+#sportsPlay .sportSteps+ p{font-size:13px}
+#sportsJourney{position:fixed;right:18px;bottom:24px;width:330px;max-height:80dvh;overflow:auto;z-index:70;background:#102532f5;color:#eff8fb;border:1px solid #ffffff40;border-radius:18px;padding:18px;box-sizing:border-box;font:15px/1.5 system-ui;box-shadow:0 12px 40px #0005}
+#sportsJourney[hidden]{display:none}
+#sportsJourney h2{font-size:21px;margin:0 0 5px}
+#sportsJourney .journeyMode{color:#93ebcc;font-size:13px;margin:4px 0 10px}
+#sportsJourney .journeyReadout{display:block;font-size:24px;font-variant-numeric:tabular-nums}
+#sportsJourney .journeyHint{color:#ffe2a5;min-height:42px;margin:8px 0}
+#sportsJourney button{font:inherit;border:1px solid #ffffff40;background:#223e4c;color:white;padding:10px 12px;border-radius:9px;min-height:44px;margin:4px 4px 4px 0;cursor:pointer;touch-action:none;user-select:none}
+#sportsJourney .primary{background:#93ebcc;color:#102c29;border-color:transparent;font-weight:750}
+#sportsJourney .journeyAction{display:block;width:100%;font-size:18px;min-height:52px}
+#sportsJourney button:disabled{opacity:.45}
+#sportsJourney label{display:block;margin:12px 0}
+#sportsJourney input{width:20px;height:20px;vertical-align:middle;accent-color:#93ebcc}
+#sportsJourney .journeyControls{display:flex;flex-wrap:wrap;gap:4px}
+#sportsJourney .journeyControls button{flex:1;white-space:nowrap}
+body:has(#sportsJourney:not([hidden])) #castOptions{visibility:hidden}
+@media(max-width:600px){
+ #sportsPlay{max-height:48dvh;padding:10px 12px;bottom:max(8px,env(safe-area-inset-bottom));}
+ #sportsPlay>p:not(.best){display:none}
+ #sportsPlay .notice{font-size:15px;min-height:23px}
+ #sportsPlay .best{margin:4px 0;font-size:11px}
+ #sportsPlay .aimControls{position:fixed;right:12px;top:32%;flex-wrap:wrap;width:108px}
+ #sportsPlay .aimControls button{background:#102532ec}
+ #sportsPlay .row button{min-height:44px}
+ #sportsJourney{right:10px;bottom:max(8px,env(safe-area-inset-bottom));width:calc(100% - 20px);padding:12px;max-height:49dvh;font-size:14px}
+ #sportsJourney .journeyReadout{font-size:22px}
+ #sportsJourney .journeyHint{min-height:22px;margin:5px 0}
+ #sportsJourney .journeyMode{margin:0 0 4px}
+}
+@media(max-height:500px) and (min-width:601px){#sportsJourney,#sportsPlay{width:300px;max-height:92dvh;bottom:10px;padding:10px}#sportsPlay>p:not(.best){display:none}}

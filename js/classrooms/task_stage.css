@@ -1,0 +1,58 @@
+/* The observation bench stays above the answer sheet, never behind it. */
+#workstation.task-mode{padding:0;background:#e6eeef;backdrop-filter:none}
+.task-mode>.workShell{width:100%;height:100dvh;max-height:none;border:0;border-radius:0;box-shadow:none;overflow:hidden;display:grid;grid-template-rows:64px minmax(340px,46dvh) minmax(0,1fr)}
+.task-mode .workHead{padding:9px 26px;background:#fff;gap:16px}
+.task-mode .workHead>div{display:flex;align-items:center;gap:22px;min-width:0}
+.task-mode .workHead .eyebrow{font-size:13px;color:#496164;letter-spacing:0}
+.task-mode .workHead h2{font-size:22px;margin:0;color:#193d43;font-weight:650}
+.task-mode #closeWork{min-width:44px;min-height:44px;border-color:#b6c9c9;border-radius:5px}
+.taskStage{position:relative;isolation:isolate;min-height:0;overflow:hidden;background:#d7e5e8;border-bottom:4px solid #3d6d75}
+.taskViewport{position:absolute;inset:0;touch-action:none;cursor:grab}
+.taskViewport:active{cursor:grabbing}.taskViewport canvas{display:block;width:100%!important;height:100%!important}
+.taskStageHead{position:absolute;left:26px;top:16px;pointer-events:none;display:grid;gap:5px;max-width:calc(100% - 475px);color:#1b3d43;text-shadow:0 1px 4px #fff}
+.taskStageHead strong{font-size:19px;font-weight:650}.taskStageHead span{font-size:13px;line-height:1.5}
+.taskStageTools{position:absolute;right:22px;top:13px;display:flex;gap:6px}.taskStageTools button{min-height:40px;font-size:13px;padding:8px 13px;background:#f9fcf4ef;border:1px solid #91acb0;border-radius:5px;color:#1a4650}
+.taskStageTools #stageExpand{background:#245c69;color:white;border-color:#245c69}
+.taskStageTools:has(#stageStep){gap:4px}.taskStageTools:has(#stageStep) button{padding:8px 10px}
+.taskGuide{margin:14px 0;padding:12px 14px;background:#fff;border-left:3px solid #307568;color:#254b46}.taskGuide strong{font-size:14px}.taskGuide p{font-size:14px;line-height:1.75;margin:7px 0 0}
+#lessonNav{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}#lessonNav button{flex:1;min-height:44px;font-size:13px;padding:8px}#lessonNav .active{color:#fff;background:#245c69;border-color:#245c69}
+.taskStageCaption{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);margin:0;max-width:90%;padding:7px 16px;background:#f9fcf1ed;border:1px solid #c5d8d6;border-radius:4px;color:#29474b;font-size:13px;line-height:1.5;text-align:center;pointer-events:none;max-height:62px;overflow:auto}
+.task-mode .workBody{overflow:auto;grid-template-columns:minmax(240px,28%) minmax(0,1fr);background:#fff;scrollbar-gutter:stable}
+.task-mode .workBody>aside{padding:18px 24px;background:#edf3f2;border-color:#cbd9d9}
+.task-mode .sectionLabel{font-size:12px;letter-spacing:1px;color:#48656c}
+.task-mode .workBody>aside>p{font-size:15px;line-height:1.75;margin:8px 0 14px}
+.task-mode .note{padding-top:12px}.task-mode .note p{font-size:13px;margin:8px 0}.task-mode #taskStatus{margin-top:12px;font-size:13px}
+.task-mode .workBody>main{padding:16px 24px 28px;background:#fff;max-width:none}
+.task-mode .editorToolbar{padding-bottom:9px;letter-spacing:0;font-size:13px;color:#53686a}
+.task-mode #tiers button{font-size:12px;min-height:34px}.task-mode #preamble{font-size:13px;background:#eaf0f1;border:1px solid #d1dedf;border-bottom:0;padding:8px 14px;border-radius:4px 4px 0 0;color:#46676e}
+.task-mode #code{font-size:15px;line-height:1.65;height:112px;min-height:96px;border-color:#bacfd1;background:#fbfdfc;border-radius:0 0 4px 4px;padding:10px 14px}
+.task-mode #operators{margin:8px 0;gap:6px}.task-mode #operators button{font-size:13px;padding:6px 11px;min-height:34px}
+.task-mode .runRow{margin:9px 0;flex-wrap:wrap}.task-mode .runRow button{font-size:14px;min-height:42px}.task-mode #runStatus{font-size:12px}.task-mode .outputLabel{margin:12px 0 6px;letter-spacing:0;font-size:12px}.task-mode #output{font-size:13px;min-height:42px;padding:9px 14px;background:#eef3f0}.task-mode #feedback{font-size:14px}.task-mode .journeySettlement{margin:12px 0;padding:12px 15px}.task-mode .journeySettlement>strong{font-size:17px}
+.taskActive>header,.taskActive>footer,.taskActive #crosshair,.taskActive #touchMove,.taskActive #castOptions,.taskActive #notice{display:none!important}
+.taskStage.stage-expanded{position:fixed;inset:0;z-index:60;border:0;height:100dvh}
+@media(max-width:760px){
+ .taskStageTools:has(#stageStep){flex-wrap:wrap;gap:3px}.taskStageTools:has(#stageStep) button{font-size:11px;padding:6px 7px;min-height:40px}.taskGuide{margin:10px 0;padding:9px 12px}.taskGuide p{font-size:13px}
+ .task-mode>.workShell{grid-template-rows:62px minmax(235px,35dvh) minmax(0,1fr)}
+ .task-mode .workHead{padding:7px 12px}.task-mode .workHead>div{display:block}.task-mode .workHead .eyebrow{font-size:11px}.task-mode .workHead h2{font-size:18px;margin-top:4px}
+ .taskStageHead{top:10px;left:12px;max-width:calc(100% - 24px);gap:2px}.taskStageHead strong{font-size:15px}.taskStageHead span{font-size:11px}.taskStageTools{top:auto;right:10px;bottom:10px;left:10px;justify-content:center;gap:4px}.taskStageTools button{min-height:40px;font-size:12px;padding:7px 10px}
+ .taskStageCaption{display:none}.task-mode .workBody{display:block;scrollbar-gutter:auto}.task-mode .workBody>aside{padding:12px 15px}.task-mode .workBody>aside>p{font-size:14px;line-height:1.6;margin:5px 0 10px}.task-mode .note{display:block;padding-top:8px}.task-mode .note p{margin:3px 0}.task-mode #cardBtn{min-height:36px}.task-mode #taskStatus{font-size:12px;margin-top:9px}
+ .task-mode .workBody>main{padding:14px 15px 30px}.task-mode #code{font-size:16px;height:140px}.task-mode #tiers button{min-height:40px}.task-mode #operators button{min-height:40px}.task-mode .editorToolbar{gap:6px}.task-mode .editorToolbar>span{display:none}.task-mode #runStatus{flex-basis:100%}.task-mode #knowledgeCard{font-size:12px}.taskStage.stage-expanded .taskStageCaption{display:block;bottom:63px;width:90%}
+}
+@media(max-height:580px) and (min-width:761px){.task-mode>.workShell{grid-template-rows:56px 220px minmax(0,1fr)}.taskStageHead{top:8px}.taskStageTools{top:7px}}
+@media(max-height:500px) and (max-width:950px){.task-mode>.workShell{grid-template-rows:50px 180px minmax(0,1fr)}.task-mode .workHead h2{font-size:16px}.taskStageHead span{display:none}.taskStageHead{max-width:40%}.taskStageTools{top:8px;left:auto;bottom:auto;right:10px}.taskStageCaption{display:none}}
+/* Practice and Python playback are separate, plainly labelled stages. */
+.taskPractice{position:absolute;z-index:2;left:14px;right:14px;bottom:10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 14px;padding:10px 14px;background:#fffffff5;border:1px solid #acc6c5;border-radius:7px;box-shadow:0 4px 18px #244d5320;color:#173f42}
+.practiceHead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.practiceHead strong{font-size:15px;color:#155c54}.practicePolicy{font-size:11px;color:#496561}
+.practicePrompt{font-size:13px;line-height:1.5;margin:0;grid-column:1}.practiceControls{display:flex;gap:5px;flex-wrap:wrap;align-items:center;grid-column:1}.practiceControls[hidden],.practiceNav button[hidden],.practiceReadout[hidden]{display:none}
+.practiceControls button,.practiceNav button{min-height:38px;min-width:44px;border:1px solid #a5bfbc;border-radius:5px;background:#f0f7f4;color:#1a4945;padding:7px 10px;font-size:12px}.practiceControls button:focus-visible,.practiceNav button:focus-visible{outline:3px solid #bd851a;outline-offset:2px}.practiceControls button:disabled{opacity:.6}.practiceControls .practicePicked{background:#f1d696;border-color:#b98930}
+.practiceReadout{margin:0;font-size:12px;line-height:1.45;color:#395b52;grid-column:1}.practiceNav{grid-column:2;grid-row:1/5;display:flex;flex-direction:column;justify-content:center;gap:5px}.practiceNav #practiceStart{background:#1e655d;border-color:#1e655d;color:#fff;font-weight:650}.practiceNav #practiceSkip{background:#fff}.practiceChoiceLabel{font-size:12px;font-weight:600}
+.taskStage .taskViewport{bottom:152px}.taskStage[data-phase=coding] .taskViewport,.taskStage[data-phase=playback] .taskViewport{bottom:92px}.taskStage .taskStageCaption{bottom:96px;font-size:12px;padding:4px 12px}.taskStage[data-phase=practice] .taskStageCaption{display:none}.taskStage[data-phase=practice] .taskStageTools #stageStep,.taskStage[data-phase=practice] .taskStageTools #stageReplay{display:none}
+.task-mode>.workShell{grid-template-rows:64px minmax(420px,51dvh) minmax(0,1fr)}
+.practiceVoiceHost .voiceGuide{margin:10px 0 0;padding:8px 0 0;border:0;background:transparent}.practiceVoiceHost .voiceGuide ol{display:none}.practiceVoiceHost .voiceGuideStatus{font-size:11px}.practiceVoiceHost .voiceGuideHead strong{font-size:12px}
+.taskStage.stage-expanded .taskViewport{bottom:155px}.taskStage.stage-expanded[data-phase=coding] .taskViewport,.taskStage.stage-expanded[data-phase=playback] .taskViewport{bottom:95px}
+@media(max-width:760px){
+ .task-mode>.workShell{grid-template-rows:62px minmax(375px,49dvh) minmax(0,1fr)}
+ .taskPractice{left:7px;right:7px;bottom:7px;padding:8px;gap:4px 6px;grid-template-columns:minmax(0,1fr)}.practiceHead{gap:5px}.practiceHead strong{font-size:13px}.practicePolicy{font-size:10px}.practicePrompt{font-size:12px}.practiceControls{gap:4px}.practiceControls button{min-height:36px;padding:5px 8px;font-size:11px}.practiceNav{grid-column:1;grid-row:auto;flex-direction:row;justify-content:flex-start;gap:5px}.practiceNav button{min-height:34px;font-size:11px;padding:5px 9px}.practiceReadout{max-height:39px;overflow:auto;font-size:11px}.taskStage .taskViewport{bottom:183px;top:22px}.taskStage[data-phase=coding] .taskViewport,.taskStage[data-phase=playback] .taskViewport{bottom:125px}.taskStageTools{top:47px;bottom:auto;right:8px;left:auto;gap:4px}.taskStageTools button{font-size:11px;min-height:32px;padding:5px 8px}.taskStageHead{max-width:calc(100% - 20px)}.taskStageHead span{font-size:10px}.taskStage .taskStageCaption{bottom:128px;max-height:36px;max-width:90%;font-size:10px}.taskStage[data-phase=playback] .taskStageCaption{display:block}
+}
+@media(max-height:580px) and (min-width:761px){.task-mode>.workShell{grid-template-rows:52px 320px minmax(0,1fr)}.taskPractice{bottom:6px;padding:7px 10px}.practiceControls button{min-height:32px}.taskStage .taskViewport{bottom:130px}.taskStage[data-phase=coding] .taskViewport,.taskStage[data-phase=playback] .taskViewport{bottom:82px}}
+@media(max-height:500px){.task-mode>.workShell{grid-template-rows:50px minmax(340px,auto) minmax(280px,1fr);overflow:auto}.task-mode .workBody{overflow:visible}.taskStage{min-height:340px}.taskStageHead{max-width:calc(100% - 24px)}}

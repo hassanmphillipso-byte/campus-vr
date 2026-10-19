@@ -1,0 +1,12 @@
+.voiceGuide{box-sizing:border-box;min-width:0;padding:16px 18px;margin:0 0 18px;border:1px solid #b8cfc3;border-left:4px solid #287052;border-radius:12px;background:#f1f7ef;color:#203d32;font-size:15px;line-height:1.65;text-align:left}
+.voiceGuideHead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.voiceGuideHead strong{font-size:17px;color:#183e2e}
+.voiceGuide .voiceGuidePlay{font-family:inherit;min-height:44px;padding:8px 14px;border:1px solid #286447;border-radius:8px;background:#245e44;color:#fff;font-size:14px;cursor:pointer;white-space:nowrap}
+.voiceGuide .voiceGuidePlay:focus-visible{outline:3px solid #e39e23;outline-offset:3px}
+.voiceGuide ol{margin:0;padding-left:1.5em}.voiceGuide li{padding:2px 0}
+.voiceGuide p{font-size:inherit;line-height:inherit;margin:8px 0 0;overflow-wrap:anywhere}
+.voiceGuide .voiceGuideCode{font-size:13px;color:#445c4e;border-top:1px solid #d0dfd1;padding-top:8px}
+.voiceGuideTier{font-weight:600}.voiceGuideStatus{display:block;font-size:12px;color:#4b6356;margin-top:8px}
+.voiceGuideChunk.isReading{background:#e1efdd;border-radius:6px}
+.examTask .voiceGuide{margin-top:14px}.examTask .voiceGuide button{width:auto}.examTask .voiceGuideHead strong{font-size:16px}
+@media(max-width:650px){.voiceGuide{padding:12px;margin-bottom:12px;font-size:14px}.voiceGuideHead{gap:6px}.voiceGuideHead strong{font-size:16px}.voiceGuide .voiceGuidePlay{min-height:44px}.voiceGuideCode{font-size:12px}}

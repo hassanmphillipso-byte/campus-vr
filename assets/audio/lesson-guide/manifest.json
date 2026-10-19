@@ -1,0 +1,288 @@
+{
+  "version": 1,
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
+  "revision": "e7dd0585652209fa0d7783659aad4e8a324de11c",
+  "runtime": "mlx-audio 0.5.0 / Apple Silicon MLX",
+  "localGeneration": true,
+  "voice": "female-presenter authorized house reference",
+  "referenceSHA256": "930da35b7e6254e9f7317ca83080ce0a13d3f7f423a98bf246a97dbfdb3d7052",
+  "postprocess": {
+    "tempo": 0.95,
+    "LUFS": -18,
+    "truePeakLimit": -2,
+    "endPadSeconds": 0.25,
+    "finalLimiterLinear": 0.75
+  },
+  "clips": {
+    "g101": {
+      "file": "g101.m4a",
+      "text": "先在上方调整用时，观察同样路程下速度怎么变。用路程除以用时，把结果存为速度，再打印。点运行代码，对照上面的速度表。",
+      "textSHA256": "a41c6b7bf539b00b384242dfdfc844a9184213ebf6f476330d2e5e1359b88b68",
+      "sha256": "f63664946a191e0aeb21c686c7f4545ba70c69a483dfb1e98b6eb389c469db28",
+      "rawSHA256": "2826aa64d7c153c681bf6096fba4e6f65506c475dae4c3fc0beee835130254be",
+      "bytes": 94711,
+      "seconds": 11.25
+    },
+    "g102": {
+      "file": "g102.m4a",
+      "text": "先调整计时，比较精确速度和只保留整数的结果。代码使用两条斜线的整除，用时变量放在除号后面。点运行代码，比较整数商和上一题的小数结果。",
+      "textSHA256": "6d5ead026911252eedda800406a4c1118a1e3adce04995297f6050eb108785d8",
+      "sha256": "5838058c99968757bd721db46d00ac216e8a1d27598fb97de3cfbdcffe2da9f3",
+      "rawSHA256": "01772e295057514980ef5852038664055cca9374f1f633ce75203da02953de16",
+      "bytes": 105951,
+      "seconds": 12.65
+    },
+    "g103swim": {
+      "file": "g103swim.m4a",
+      "text": "先用泳道演练，分清本趟已游的距离和剩余距离。代码先用取余求本趟已游，再算剩余；在端点时剩余为零。只打印剩余距离，点运行代码看泳道标记。",
+      "textSHA256": "1c7489433a2f7f5959db6f1e02c94712336cf9f69dda4124ba4770c2fa345a4e",
+      "sha256": "fd127e9ef2d68a0c4eabf54132796e42de375944945ee9f188f586d169660955",
+      "rawSHA256": "60e7c0beec7bb971b8180b2b513a61a00244c1278a211bc5356c89f0291a73f6",
+      "bytes": 113161,
+      "seconds": 13.45
+    },
+    "g103power": {
+      "file": "g103power.m4a",
+      "text": "先逐轮展开路线，看每条旧路线怎样分出新选择。用乘方计算连续多轮的路线数，不是选择数乘轮数。只打印路线数，点运行代码看分支。",
+      "textSHA256": "5d9a73590bfb43109ae602eff3154b2a74a6a517a9bcbe65349cc28a04c63f52",
+      "sha256": "c8e6cd1e8c657acf2f4363fa61d5b27193dd9943bcb07f68baf87d0c580ae297",
+      "rawSHA256": "5af9f8c56ab5e1e512c917354d6c4aa8e98e422a50cc1f5d66ab6954ce3bf80b",
+      "bytes": 104910,
+      "seconds": 12.65
+    },
+    "g104": {
+      "file": "g104.m4a",
+      "text": "先改变成绩和速度，观察什么情况下两项都达标。规则要求两个条件同时满足，把两个判断连起来。打印判断结果，点运行代码看能否晋级。",
+      "textSHA256": "b3bc966b715261698097760ae8f8a60da7f5f2d0b8ed4b9248303e0f613fad72",
+      "sha256": "f5c6d775d2a1bd6df315381bc363c70b55ad629ce80c34c074c11f2b5afbf80d",
+      "rawSHA256": "42dd849fd8e2c02377ce39045c6f5abbeead7251949cb1b75a3bb3610ffe771e",
+      "bytes": 100110,
+      "seconds": 12.15
+    },
+    "g201": {
+      "file": "g201.m4a",
+      "text": "先把成绩卡逐张计入，观察总数怎样增加。用求和函数处理整份名单，把结果存为总数。打印总数，点运行代码看累计高度。",
+      "textSHA256": "a15c2c655d4bd7967a7edb50b1e47918b3f7208ec978f3070624dc2754163705",
+      "sha256": "a17567161917263b98d6a1d986902491ed710207b354991fb12f48ac8f194877",
+      "rawSHA256": "856dd8ee00374a1fbaffdd8a1a8e9249f4d167112f9f3dd135dea49a3b9d1e1f",
+      "bytes": 87588,
+      "seconds": 10.55
+    },
+    "g202": {
+      "file": "g202.m4a",
+      "text": "先逐张登记成绩卡，这题数记录数量，不加成绩。用计数函数数名单里的记录，重复数字也分别计数。打印人数，点运行代码核对卡片数量。接下来自己试试。",
+      "textSHA256": "993e8a623219fc0d9e3c09722e80bb8dc5bbaa136d7024578bf5f5545100dced",
+      "sha256": "c643346af133ab675f42cc81c35c8c7a74eaf689e2d7b4b3312a3c789c5ae712",
+      "rawSHA256": "7499e1ea096e01ca9e692f764b7d723cf7a9fe0bce6e409f04da4e3cf6e6eb0b",
+      "bytes": 110493,
+      "seconds": 13.35
+    },
+    "g203": {
+      "file": "g203.m4a",
+      "text": "先把成绩卡计入，再观察把总成绩平均分给每个人。用总成绩除以人数，得到平均成绩。打印平均成绩，点运行代码看平均线。接下来自己试试。",
+      "textSHA256": "0ddb0de12e7158a5950c98cfd086bbb24cae8d5caced457ad24d1331600f8494",
+      "sha256": "5b39de29b8235b0bc30889dd7d30eac1b8bbfb071ba15ec782fb3251987ff419",
+      "rawSHA256": "af4dc80f41d7b7cde18219fb4a10d2d2386f6c7b88bde447d0a0c14527720da6",
+      "bytes": 102382,
+      "seconds": 12.25
+    },
+    "g204": {
+      "file": "g204.m4a",
+      "text": "先比较成绩卡，分别找出最大值和最小值。打印时把最大值放前面，最小值放后面。点运行代码，核对输出顺序和高低标记。",
+      "textSHA256": "11d26741a3161c51ac6a0e964f9193b4ae32d817651658515c781d6a080677b3",
+      "sha256": "fbe01b9be4bea4995b8ddd514c538e61b9089a2074021099e1e232a8fa66232e",
+      "rawSHA256": "d1c03efc1270730706f3e89eb6a3bc66e839cedc1df0a3ac56fdbbe4f1abd8a9",
+      "bytes": 89271,
+      "seconds": 10.75
+    },
+    "g205": {
+      "file": "g205.m4a",
+      "text": "先操作上方成绩卡，逐张判断有没有达到一百八十分。想一想，名单变长后，能不能让电脑重复检查。这间不用写代码，理解后点完成本室任务。",
+      "textSHA256": "d199c1695cec242719fa1f1435f87d3a1e2e511fb282bced765ef3443523b6e0",
+      "sha256": "bef2eba5a9fafcd04611e84d4471ce404a64566631debc9447ee796e537852e3",
+      "rawSHA256": "9acc38fd7edc0ab87b7e8892b4719a1a6505167e5d0f17b074507f08aa9fb78c",
+      "bytes": 99019,
+      "seconds": 11.75
+    },
+    "g301": {
+      "file": "g301.m4a",
+      "text": "先逐轮演练，观察序号从一开始，每轮怎样变化。跳完把序号加一，再判断下一轮要不要继续。最后一次序号要包含十；点运行代码看逐次动作。",
+      "textSHA256": "506298e9845a9d6928556ccd1e92a0691d2fa2642c26ab3138849a878d812947",
+      "sha256": "2230d007bb9b4a1ea05de1daf5dc22d3137735f602864f616ca3ee1146c14a55",
+      "rawSHA256": "ef9cc2bc21c48fc778794a0a8c04a5a557fc4f7b91c0801210bd6f0094fe7c50",
+      "bytes": 100464,
+      "seconds": 12.15
+    },
+    "g302": {
+      "file": "g302.m4a",
+      "text": "先逐轮训练，观察累计数量；未达到目标才继续。每完成一轮，加上本轮数量，并调用一次跳跃指令。达到或超过目标就停，运行代码核对次数和累计数量。接下来自己试试。",
+      "textSHA256": "71c0d4e401ae3f81a0f0ec88f4dab5218ad6976b44718044712a873aa900528a",
+      "sha256": "1dd4ec00dfe46d60a467f600a5db0e914ec0cf1f47a9e1e22789a1438ac85cf8",
+      "rawSHA256": "57fa326212d666a246db5ee64b0eaf537ce86395347daa275e0ae349bde89626",
+      "bytes": 112954,
+      "seconds": 13.65
+    },
+    "g303": {
+      "file": "g303.m4a",
+      "text": "先看上方有限步演示，找出每轮都没有变化的序号。只打印序号不会让它增加，要在循环里面更新序号。改好后点运行代码，确认运动员能正常停下来。",
+      "textSHA256": "1b4d1abcb155a94a0329d4a816e58f90dac5d85d2eb7ee0a1da62b2420f7b44d",
+      "sha256": "074295f2867b20a866554c5bba9d9d0598c079a950ae3fb04dcb23cab50a3a84",
+      "rawSHA256": "8e57e53c0dce1e98a6e9802e090fec8a1b40c9283e16f39926d9d2b2adc8c250",
+      "bytes": 97012,
+      "seconds": 11.45
+    },
+    "g304": {
+      "file": "g304.m4a",
+      "text": "先演练取一张成绩、加入总数、移到下一张。代码用循环重复这些步骤；读完后求平均，再找最小成绩。按总数、平均数、最小值的顺序打印，运行后核对累加过程。接下来自己试试。",
+      "textSHA256": "3fdd4900823bcf25699bd67880d938f7bd753ea2acf3967b8e7db340be2fe30f",
+      "sha256": "4fdf047acbb17ab87bd16e97a5fe14a5179ac42106383474a80cbe49291b42ac",
+      "rawSHA256": "76704e3839f514f339638ed3a1ab67f94a393664d84a05f04a28e850d98a2a4f",
+      "bytes": 119947,
+      "seconds": 14.15
+    },
+    "tier1": {
+      "file": "tier1.m4a",
+      "text": "一级：点击代码下方的候选词，依次填入空白，再点运行代码，观察结果。",
+      "textSHA256": "d18fcb98289650f217c5729a87f9da85117a6a585becd77f83cacc6996c0eed7",
+      "sha256": "99a1de9398ab223828f07de74d73833af26e4c14e5c3d1941a1be2da1425dbec",
+      "rawSHA256": "01590c67bffa6af563cdb819e6f6860043c41642432b22a1f3946929ba2adf4b",
+      "bytes": 53861,
+      "seconds": 6.45
+    },
+    "tier2": {
+      "file": "tier2.m4a",
+      "text": "二级：读已经写好的代码，补上缺少的部分，补齐以后再运行并观察结果。",
+      "textSHA256": "5d2ddccdf569bf854bd3e457b7fb8f10ded5e039a48d568bf64ac2abaaa3aed1",
+      "sha256": "1bb142705f72ebc666c1510ee57ad11c6dd8d81b8b6dcaa091d3342539324256",
+      "rawSHA256": "87009af0c397b6676f36ed6ce3320fe5717d35ea3d2b81149adfd74173ebf024",
+      "bytes": 55276,
+      "seconds": 6.45
+    },
+    "tier3": {
+      "file": "tier3.m4a",
+      "text": "三级：使用题目给定的变量自己写代码；卡住时，可以先回到一级练习。",
+      "textSHA256": "425203b6ffc954aba6f578c2c902d69ea5c7cffc84dfd5c4e3baf954003e4854",
+      "sha256": "47c35a3b3ebe6a22f3a9c9b2ac33f2ff76b2ce7c17514d0ed81d30890ec65744",
+      "rawSHA256": "9e39bcc471a2a2b1c53f7f99b21d87af8aff0bb1db654b06ccd14343bc905661",
+      "bytes": 48766,
+      "seconds": 6.05
+    },
+    "examRun": {
+      "file": "examRun.m4a",
+      "text": "先看题目给出的路程和时间，再看要求是否保留小数。按题目中的表达式计算，选好后点提交。",
+      "textSHA256": "17ccff50cacf230a9120e15ab5bda579e71ef3c7d926a8cab32603f11f590c76",
+      "sha256": "1b155f9492e68c1aa88c225ab9e1db046b7ae7af5cb90f8236f64bbba2606257",
+      "rawSHA256": "5c5440170c81aa294117bb0b03a22fb6e7a7cacced09d54f97ec59451bdc439b",
+      "bytes": 63824,
+      "seconds": 7.45
+    },
+    "examGroup": {
+      "file": "examGroup.m4a",
+      "text": "先分清题目问的是每组数量、剩余数量，还是还缺多少。对照分组模型和给定数量计算，选好后点提交。",
+      "textSHA256": "00e2c2f849cd8575aa009ceccc8adfb8baa93ec624d7e25b2c39c98fddceb060",
+      "sha256": "ecee05da951c29164aec97ea495b02fd1e034d37e603ea485d9cd3660708163a",
+      "rawSHA256": "758da2d5a6d6f45f65b002500aa3e3456dc5e51c1c99e88c1b7b0e283629496f",
+      "bytes": 70854,
+      "seconds": 8.65
+    },
+    "examBranch": {
+      "file": "examBranch.m4a",
+      "text": "先看每轮有几种选择，再看连续进行了几轮。读完全部运算再计算，选好后点提交。",
+      "textSHA256": "bdbd9dbb4ea9fc818767626a90465567b141b08793bbdf27da3cd4434c9bcd95",
+      "sha256": "6d83d6fe1ee47f052b5f6ef6476261fe14ebcd8e3c2c502f60f04e33f934bc17",
+      "rawSHA256": "f4c9a837b90d21310112623ec8bf5da439214273b8fed93d00d3d50a0eeb2f45",
+      "bytes": 60059,
+      "seconds": 7.25
+    },
+    "examStats": {
+      "file": "examStats.m4a",
+      "text": "先看清题目要统计什么，再读每张记录。对照代码中的运算顺序计算，选好后点提交。",
+      "textSHA256": "7a7a3899b3f1e1385bf6602a87afcde6838aa88524083bbba26c65ccf3a2c2a1",
+      "sha256": "c6df904a5f10b09c7a3dc8ef903c4f1619986c9e703a5b1d413eaeaecbb87a04",
+      "rawSHA256": "ec1f3b4ea479da7d4f1b94e498025893e1d4de8817804a6cd5eb3f77febbd18d",
+      "bytes": 57304,
+      "seconds": 6.95
+    },
+    "examLoop": {
+      "file": "examLoop.m4a",
+      "text": "从初始数值开始，一轮一轮看条件、动作和更新。注意题目问的是执行次数、停止读数，还是程序哪里有问题。想好后选择答案，再点提交。",
+      "textSHA256": "2adebe0c9ec0d6882f0ea1c89eaa3e0967e662a98ba30d587771b77aea8a569a",
+      "sha256": "fadae0787ebb80b22bafc9c6d216493ec547b1c24697e96248ac048a63ed71e7",
+      "rawSHA256": "2b85f6d9771afeb546aef0796e96c85c3c44bb8944fe252f977ca040d5a37629",
+      "bytes": 99490,
+      "seconds": 11.95
+    },
+    "advBasic": {
+      "file": "advBasic.m4a",
+      "text": "先读这条指令要解决什么，再看下面的代码。算好或判断好后，选择一个选项，点发送指令。",
+      "textSHA256": "5845a58c285594cee12655d1a9407d66ac1896216eca688d62c0dba11d52e1ed",
+      "sha256": "10cb260452045c250feb2e1675c3319d258659913295efc07c17be045f6dfeca",
+      "rawSHA256": "79257f4011493ae60a30d39efab117b3154144a90182f08910dedc975bddcad1",
+      "bytes": 55415,
+      "seconds": 6.75
+    },
+    "advBlocks": {
+      "file": "advBlocks.m4a",
+      "text": "先算出上方指令的结果，再找到对应数字的仓道。左右移动整块，必要时旋转，让它完整进入那条仓道。确认好再点向下按钮；电脑也可以按空格落下。",
+      "textSHA256": "e1da30cb6ae8df9f97445ceef1885b6e72497f92992170156a4cd4864eac639d",
+      "sha256": "984bc70e2963ab029ea22ddd58161084de280dfa9aa46ad76a4287d7329e02c1",
+      "rawSHA256": "65e1efbd4b3ae1e7f70510b7184c0b326ce3b8d1430bfc12c87672ad06fc847f",
+      "bytes": 107579,
+      "seconds": 12.55
+    },
+    "advSetup": {
+      "file": "advSetup.m4a",
+      "text": "先读任务要求，再逐项设置下面的规则。全部选好后点起飞，系统会按照你的规则自动开火。飞行时用方向键或拖动战机，避开橙色弹幕。",
+      "textSHA256": "1699276eec8004ae4cc4799b9b729dae09b68b603ddfbd2e2911236fb31374d3",
+      "sha256": "01fdce9dfc21bb6ecefbd0bc74a777043810680e1e22544cdc688be12493b732",
+      "rawSHA256": "679001c2e8372175d3bcd6d4935f069eb4b72a4d50828bc251a82855098eac0b",
+      "bytes": 97836,
+      "seconds": 11.65
+    },
+    "advFlight": {
+      "file": "advFlight.m4a",
+      "text": "用方向键或拖动战机飞行，避开橙色弹幕。系统按照你设置的规则自动开火，保护金色运输机。准备好后点继续，恢复飞行。",
+      "textSHA256": "54f1be949f37b86a1acecfb32f9f2ee9fb5cfce299626adb7193fc84a48e11fb",
+      "sha256": "32f8dc4f07d955ce0fdb33c5377c3ec90502c19254ed9795f294caad6d360375",
+      "rawSHA256": "27600c2a7d7353daf88fd0be495c8e82c3fbd0b689954beb93f34b9b665cf6b2",
+      "bytes": 81983,
+      "seconds": 9.95
+    },
+    "advIntro": {
+      "file": "advIntro.m4a",
+      "text": "先点出发，再点地图上发光的设施。按顺序完成信号台、能源桥和护航任务。看不懂操作时，点问号或暂停按钮查看说明。",
+      "textSHA256": "fe771b499987ff63b0543be216ae6989ce86f9e03a3289f406e157fb170fca73",
+      "sha256": "e66e10b7a7358a0c6d388c2bc7d6abc0c8cd7975aa7be2545386f6f75ca74d81",
+      "rawSHA256": "3dcee56b6d60a30db15b495dc805528d482fe1b39586e5eb3e9eee935802519e",
+      "bytes": 86385,
+      "seconds": 10.35
+    },
+    "g305": {
+      "file": "g305.m4a",
+      "text": "先按顺序点亮训练点，每点只完成一次。再用 for 循环取出各个编号，范围的结束值不包含在内。每轮调用一次训练指令，点运行代码核对路线和顺序。",
+      "textSHA256": "efbf3640843bd91d97f06b6e68f1a7d95229ef6c9e31a1848f3adf69d10bf54c",
+      "sha256": "9a6a97bd67146abbd8ac48beaf2cae4600a33538f211b861868578f807d9071e",
+      "rawSHA256": "dc95c0a22966c47b08a0d80cfc4b2c9067aabe2078f491d6c7056169278b6d0c",
+      "bytes": 98349,
+      "seconds": 12.15
+    },
+    "practiceIntro": {
+      "file": "practiceIntro.m4a",
+      "text": "先操作上方模型，看看数据和结果怎样变化。演练不计成绩，可以反复重来。看懂后点开始编程；已经会了也可以直接跳过演练。接下来自己试试。",
+      "textSHA256": "925fee6ef8eadf74a9bafd2133ed4c9e7e8b4e6b224f5026eda1a2ed2a968975",
+      "sha256": "51600f0f7c66c9abf142ff006cc9ccd66055467c305b461c73833ed4a590860e",
+      "rawSHA256": "5b651579b5fd672c1a2fab359505699c4638452e1455ca8b041790a8870c0878",
+      "bytes": 105698,
+      "seconds": 12.35
+    },
+    "playbackGuide": {
+      "file": "playbackGuide.m4a",
+      "text": "这里回放的是你刚才运行的代码结果。逐步查看每轮动作和数值，找出与任务要求不同的地方。修改下面的代码，再运行一次验证。",
+      "textSHA256": "cf4cfa1ff306523fefe4bba6fc67e07e0070e2e9611cf7023ef0aa84250d33aa",
+      "sha256": "55054664a315c72ea0aa80e5d1b19fbd349418e9e12835f226477a5381ecf0c2",
+      "rawSHA256": "b67d51ce54b330378df1a03d619b0f4bd9ca7ababbcd01a82e329b2031f5fcee",
+      "bytes": 82745,
+      "seconds": 10.15
+    }
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "date": "2026-10-07",
+  "selectionBasis": "按作者官方曲风说明和项目场景初筛；未声称人工逐首听审或完成无缝循环验收。",
+  "tracks": [
+    {
+      "id": "easy-lemon",
+      "title": "Easy Lemon",
+      "author": "Kevin MacLeod",
+      "scene": "教室学习",
+      "note": "吉他与马林巴，82 BPM，作者特别说明适合配对白。",
+      "role": "教室首选",
+      "recommended": true,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200076",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Easy%20Lemon.mp3",
+      "file": "files/easy-lemon.mp3",
+      "duration": "2:06",
+      "bpm": "82",
+      "loop": "未验证无缝循环",
+      "bytes": 5057420,
+      "sha256": "2486b8ecfe4575f9ab31613a2c03c2ee45e6e5280301d05b4dd7237c9e1c2531",
+      "seconds": 126.380425,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "clear-air",
+      "title": "Clear Air",
+      "author": "Kevin MacLeod",
+      "scene": "安静区域",
+      "note": "原声吉他与柔和钢琴，68 BPM，适合资料室和阅读区。",
+      "role": "资料室首选",
+      "recommended": true,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Clear%20Air.mp3",
+      "file": "files/clear-air.mp3",
+      "duration": "3:03",
+      "bpm": "68",
+      "loop": "未验证无缝循环",
+      "bytes": 7355998,
+      "sha256": "670811ea9df5186d89161075dd20567c420fdea1cec3f28766dda575accdec8a",
+      "seconds": 183.79755,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "carefree",
+      "title": "Carefree",
+      "author": "Kevin MacLeod",
+      "scene": "校园漫游",
+      "note": "尤克里里与钟琴，96 BPM，适合白天校园和广场。",
+      "role": "校园备选",
+      "recommended": false,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400037",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carefree.mp3",
+      "file": "files/carefree.mp3",
+      "duration": "3:25",
+      "bpm": "96",
+      "loop": "未验证无缝循环",
+      "bytes": 6566713,
+      "sha256": "8433b770a630d9b1594fd484442c677907ece899a4d149954cd2e74fd733e311",
+      "seconds": 205.139625,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "life-of-riley",
+      "title": "Life of Riley",
+      "author": "Kevin MacLeod",
+      "scene": "校园漫游",
+      "note": "尤克里里与打击乐，102 BPM，适合课间与章节完成。",
+      "role": "课间 / 结业",
+      "recommended": false,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400054",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Life%20of%20Riley.mp3",
+      "file": "files/life-of-riley.mp3",
+      "duration": "3:55",
+      "bpm": "102",
+      "loop": "未验证无缝循环",
+      "bytes": 7533831,
+      "sha256": "1916f05cd1860949f9241e17966d334c39852b531329e4a05802720bb154c564",
+      "seconds": 235.363281,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "dream-culture",
+      "title": "Dream Culture",
+      "author": "Kevin MacLeod",
+      "scene": "安静区域",
+      "note": "钢琴与轻打击乐，70 BPM，适合泳馆观察区与安静过渡。",
+      "role": "泳馆首选",
+      "recommended": true,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300046",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dream%20Culture.mp3",
+      "file": "files/dream-culture.mp3",
+      "duration": "3:34",
+      "bpm": "70",
+      "loop": "未验证无缝循环",
+      "bytes": 8576659,
+      "sha256": "f12cbb52bd4b92bd6cf8a343645567c119627e9cbf98108a3eb6ac2cc275ee46",
+      "seconds": 214.360825,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "local-forecast-slower",
+      "title": "Local Forecast - Slower",
+      "author": "Kevin MacLeod",
+      "scene": "教室学习",
+      "note": "钢琴、贝斯与爵士配器，77 BPM，作者标注此版本可干净循环。",
+      "role": "数据任务备选",
+      "recommended": false,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300011",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Local%20Forecast%20-%20Slower.mp3",
+      "file": "files/local-forecast-slower.mp3",
+      "duration": "3:19",
+      "bpm": "77",
+      "loop": "作者标注可循环",
+      "bytes": 7984182,
+      "sha256": "8214ce19de17d6edfe4b83a156feb321d814278deb582fdd5209dcb47f56d440",
+      "seconds": 199.5494,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "wallpaper",
+      "title": "Wallpaper",
+      "author": "Kevin MacLeod",
+      "scene": "教室学习",
+      "note": "合成器与吉他，92 BPM，适合任务选择；旋律较醒目，讲解时需压低。",
+      "role": "任务选择",
+      "recommended": false,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100843",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Wallpaper.mp3",
+      "file": "files/wallpaper.mp3",
+      "duration": "3:40",
+      "bpm": "92",
+      "loop": "未验证无缝循环",
+      "bytes": 8804339,
+      "sha256": "9fa810e5193c88f1b360537366f210f16c2588106d5292f0659e9957fa274f96",
+      "seconds": 220.055525,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "electrodoodle",
+      "title": "Electrodoodle",
+      "author": "Kevin MacLeod",
+      "scene": "体育训练",
+      "note": "合成器与鼓组，120 BPM，适合篮球练习、热身和计时挑战。",
+      "role": "体育首选",
+      "recommended": true,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200079",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Electrodoodle.mp3",
+      "file": "files/electrodoodle.mp3",
+      "duration": "2:46",
+      "bpm": "120",
+      "loop": "未验证无缝循环",
+      "bytes": 6644624,
+      "sha256": "75227ad153780ee0c57ae529caa7f8a891877a46596ff8800a16c90b34b6d18c",
+      "seconds": 166.060425,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "cipher",
+      "title": "Cipher",
+      "author": "Kevin MacLeod",
+      "scene": "体育训练",
+      "note": "电子琴与合成器，150 BPM，节奏较强，适合短时挑战，避开读题段。",
+      "role": "限时挑战",
+      "recommended": false,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cipher2.mp3",
+      "file": "files/cipher.mp3",
+      "duration": "3:51",
+      "bpm": "150",
+      "loop": "未验证无缝循环",
+      "bytes": 9252699,
+      "sha256": "d3d0614535a61d748e2fd8d5117fc4d781022a7624794802a2462d8af3fdd522",
+      "seconds": 231.26205,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "beachfront-celebration",
+      "title": "Beachfront Celebration",
+      "author": "Kevin MacLeod",
+      "scene": "体育训练",
+      "note": "钢鼓、铜管与节奏组，120 BPM，适合运动会和短时庆祝。",
+      "role": "运动会 / 庆祝",
+      "recommended": false,
+      "license": "CC BY 4.0 · 需署名",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200022",
+      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Beachfront%20Celebration.mp3",
+      "file": "files/beachfront-celebration.mp3",
+      "duration": "3:07",
+      "bpm": "120",
+      "loop": "未验证无缝循环",
+      "bytes": 7494135,
+      "sha256": "73ffcea8277780253b4e42dcbc3c5b3c50ba8ad343023372726a8678f43cc68e",
+      "seconds": 187.297975,
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "sherwood",
+      "title": "Sherwood",
+      "author": "zesona / Chris Murphy",
+      "scene": "教室学习",
+      "note": "柔和轻快的循环音乐，110 BPM；适合低音量任务操作。",
+      "role": "CC0备选",
+      "recommended": false,
+      "license": "CC0 · 无强制署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://opengameart.org/content/sherwood",
+      "download": "https://opengameart.org/sites/default/files/sherwood_0.ogg",
+      "file": "files/sherwood.ogg",
+      "loop": "作者标注可循环",
+      "bytes": 706853,
+      "sha256": "a7796c847682f5fd00041ffc0b0d71b67d95a41b4d6d914cd8e11bc37fe29a88",
+      "seconds": 34.905397,
+      "duration": "0:34",
+      "probe": [
+        {
+          "codec_name": "vorbis",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "where-was-i",
+      "title": "Where was I?",
+      "author": "yd",
+      "scene": "校园漫游",
+      "note": "作者提供的循环背景曲，可作为校园漫游备选。",
+      "role": "CC0备选",
+      "recommended": false,
+      "license": "CC0 · 无强制署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://opengameart.org/content/where-was-i",
+      "download": "https://opengameart.org/sites/default/files/WereWasI_0.ogg",
+      "file": "files/where-was-i.ogg",
+      "loop": "作者标注可循环",
+      "bytes": 615936,
+      "sha256": "cb52cc2226123233303bb7ea5f49857d818b8d70cddfb76331bf48ca2c39374e",
+      "seconds": 68.230431,
+      "duration": "1:08",
+      "probe": [
+        {
+          "codec_name": "vorbis",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "revelation",
+      "title": "Revelation",
+      "author": "Indieteur",
+      "scene": "安静区域",
+      "note": "作者描述为平静的原声器乐，适合阅读区和课后休息。",
+      "role": "CC0备选",
+      "recommended": false,
+      "license": "CC0 · 无强制署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://opengameart.org/content/revelation",
+      "download": "https://opengameart.org/sites/default/files/Revelation_0.mp3",
+      "file": "files/revelation.mp3",
+      "loop": "未验证无缝循环",
+      "bytes": 3395007,
+      "sha256": "b6111a64fa948e76b01d08fc5de53177885a8d8db0dea65330946760892feb43",
+      "seconds": 84.845714,
+      "duration": "1:24",
+      "probe": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ]
+    },
+    {
+      "id": "morning",
+      "title": "Morning",
+      "author": "しゃろう / Sharou",
+      "scene": "校园漫游",
+      "note": "明亮的流行 / 乡村风格；有假日清晨的轻松感，适合进入校园。",
+      "role": "校园首选",
+      "recommended": true,
+      "license": "OpenTracks素材许可 · 以曲页和作者条件为准",
+      "licenseUrl": "https://opentracks.com/help/articles/license/",
+      "source": "https://opentracks.com/bgm/detail/2445",
+      "file": null,
+      "duration": "2:45（原版）",
+      "loop": "作者注明Track 2可直接循环"
+    },
+    {
+      "id": "afternoon",
+      "title": "昼下がり気分",
+      "author": "KK",
+      "scene": "校园漫游",
+      "note": "温暖的日常感，适合课间、走廊和轻松交流；另有八音盒版本。",
+      "role": "课间首选",
+      "recommended": true,
+      "license": "OpenTracks素材许可 · 以曲页和作者条件为准",
+      "licenseUrl": "https://opentracks.com/help/articles/license/",
+      "source": "https://opentracks.com/bgm/detail/4695",
+      "file": null,
+      "duration": "3:55",
+      "loop": "页面未确认无缝循环"
+    },
+    {
+      "id": "summer-triangle",
+      "title": "SUMMER TRIANGLE",
+      "author": "しゃろう / Sharou",
+      "scene": "体育训练",
+      "note": "清爽的Future Bass，适合运动会开场或挑战预告，读题时不宜突出。",
+      "role": "体育开场",
+      "recommended": false,
+      "license": "OpenTracks素材许可 · 以曲页和作者条件为准",
+      "licenseUrl": "https://opentracks.com/help/articles/license/",
+      "source": "https://opentracks.com/bgm/detail/12983",
+      "file": null,
+      "duration": "2:08",
+      "loop": "页面未确认无缝循环"
+    },
+    {
+      "id": "sci-fi-puzzle",
+      "title": "Sci-fi Puzzle In-Game 1",
+      "author": "MintoDog",
+      "source": "https://opengameart.org/content/sci-fi-puzzle-in-game-1",
+      "license": "CC0 · 保留作者署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "files/sci-fi-puzzle.mp3",
+      "download": "https://opengameart.org/sites/default/files/sci-fi_puzzle_in-game_1_bpm138.mp3",
+      "sha256": "d843eb01d486152a07b5b3aff3cd891401bcc71b77f00104d4db65c938de4139",
+      "bytes": 5568391,
+      "scene": "知识方块",
+      "loop": "作者标注循环；游戏内交叉淡化",
+      "role": "知识方块 · 已接入",
+      "recommended": false,
+      "duration": "2:19",
+      "bpm": "138",
+      "note": "科幻解谜循环曲。游戏内已统一响度，并使用较轻的场景音量；这里试听的是原曲。"
+    },
+    {
+      "id": "space-shooter",
+      "title": "Space Shooter (Loop)",
+      "author": "Alex McCulloch / Pro Sensory",
+      "source": "https://opengameart.org/content/space-shooter-loop",
+      "license": "CC0 · 保留作者署名",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "files/space-shooter.mp3",
+      "download": "https://opengameart.org/sites/default/files/space_shooter_0.mp3",
+      "sha256": "0768b7660257d45cbcde7acbd40f791e368e4c7837be5dfea49a0e4e9c2dfe82",
+      "bytes": 3291284,
+      "scene": "战机护航",
+      "loop": "作者标注循环；游戏内交叉淡化",
+      "audioFilter": "acompressor=threshold=0.025:ratio=8:attack=0.1:release=90:makeup=1",
+      "role": "战机护航 · 已接入",
+      "recommended": false,
+      "duration": "1:22",
+      "note": "太空射击循环曲。游戏内版本已柔化瞬间峰值并统一响度；这里试听的是原曲。"
+    }
+  ]
+}

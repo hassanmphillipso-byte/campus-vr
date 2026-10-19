@@ -1,0 +1,658 @@
+{
+  "source_path": "/Users/a1234/Desktop/campus-vr-demo/index.html",
+  "source_sha256": "a0e2307661a675a5e70a8acd7d864eabacb31aeaf2100e67309aa71f2a1ffda0",
+  "campus_npc_count": 46,
+  "guide_count": 1,
+  "room_actor_count_from_handoff": 20,
+  "status": "read_only_mapping_no_campus_edits",
+  "rows": [
+    {
+      "n": "熊雨桐",
+      "g": "女",
+      "r": "高三学生·跳绳队队长",
+      "m": "Girl_B",
+      "z": "ropeTeam",
+      "b": "jump",
+      "height": 1.7,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "万子轩",
+      "g": "男",
+      "r": "高三学生·跳绳队",
+      "m": "Boy_A",
+      "z": "ropeTeam",
+      "b": "jump",
+      "height": 1.78,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "罗晨曦",
+      "g": "女",
+      "r": "高二学生·跳绳队",
+      "m": "Girl_A",
+      "z": "ropeTeam",
+      "b": "jump",
+      "height": 1.68,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "谌之涵",
+      "g": "女",
+      "r": "高一学生·跳绳队",
+      "m": "Girl_B",
+      "z": "ropeTeam",
+      "b": "jump",
+      "height": 1.65,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "李泽宇",
+      "g": "男",
+      "r": "高二学生·跳绳队",
+      "m": "Boy_A",
+      "z": "ropeTeam",
+      "b": "jump",
+      "height": 1.74,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "涂欣然",
+      "g": "女",
+      "r": "初三学生·跳绳队",
+      "m": "Girl_A",
+      "z": "ropeTeam",
+      "b": "jump",
+      "height": 1.63,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "熊梓豪",
+      "g": "男",
+      "r": "初一学生",
+      "m": "Boy_A",
+      "z": "main",
+      "b": "walk",
+      "height": 1.55,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "邓芊羽",
+      "g": "女",
+      "r": "初一学生",
+      "m": "Girl_A",
+      "z": "plaza",
+      "b": "walk",
+      "height": 1.53,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "胡子航",
+      "g": "男",
+      "r": "初二学生",
+      "m": "Boy_A",
+      "z": "colA",
+      "b": "walk",
+      "height": 1.6,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "欧阳朵朵",
+      "g": "女",
+      "r": "初二学生",
+      "m": "Girl_A",
+      "z": "bench",
+      "b": "sitChair",
+      "height": 1.58,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "刘一帆",
+      "g": "男",
+      "r": "初三学生",
+      "m": "Boy_C",
+      "z": "grass",
+      "b": "sitFloor",
+      "height": 1.65,
+      "proposed_asset": "student-03",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "万梓萱",
+      "g": "女",
+      "r": "初三学生",
+      "m": "Girl_B",
+      "z": "spine",
+      "b": "walk",
+      "height": 1.63,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "李昊然",
+      "g": "男",
+      "r": "高一学生·足球队",
+      "m": "Boy_C",
+      "z": "footField",
+      "b": "footballer",
+      "height": 1.7,
+      "proposed_asset": "student-03",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "陈雨欣",
+      "g": "女",
+      "r": "高一学生",
+      "m": "Girl_A",
+      "z": "ew",
+      "b": "walk",
+      "height": 1.65,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "王浩宇",
+      "g": "男",
+      "r": "高二学生",
+      "m": "Boy_A",
+      "z": "track",
+      "b": "run",
+      "height": 1.74,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "张若溪",
+      "g": "女",
+      "r": "高二学生",
+      "m": "Girl_B",
+      "z": "track",
+      "b": "run",
+      "height": 1.68,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "徐子谦",
+      "g": "男",
+      "r": "高三学生·守门员",
+      "m": "Boy_A",
+      "z": "goalie",
+      "b": "goalie",
+      "height": 1.78,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "黄悦",
+      "g": "女",
+      "r": "高三学生",
+      "m": "Girl_A",
+      "z": "bench",
+      "b": "sitChair",
+      "height": 1.7,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "台词含红色校服，融合时改为蓝/黄之一并与外观一致"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "胡博文",
+      "g": "男",
+      "r": "高三学生",
+      "m": "Boy_C",
+      "z": "gate",
+      "b": "walk",
+      "height": 1.78,
+      "proposed_asset": "student-03",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "孙梦洁",
+      "g": "女",
+      "r": "高二学生",
+      "m": "Girl_B",
+      "z": "grass",
+      "b": "sitFloor",
+      "height": 1.68,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "邹亮",
+      "g": "男",
+      "r": "跳绳队总教练",
+      "m": "Boy_C",
+      "z": "rostrum",
+      "b": "stand",
+      "height": 1.72,
+      "proposed_asset": "teacher-03",
+      "student_palette": null,
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "万老师",
+      "g": "女",
+      "r": "语文老师",
+      "m": "Girl_A",
+      "z": "colA",
+      "b": "walk",
+      "height": 1.6,
+      "proposed_asset": "teacher-01",
+      "student_palette": null,
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "李老师",
+      "g": "男",
+      "r": "数学老师",
+      "m": "Boy_A",
+      "z": "colB",
+      "b": "walk",
+      "height": 1.75,
+      "proposed_asset": "teacher-02",
+      "student_palette": null,
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "胡老师",
+      "g": "女",
+      "r": "英语老师",
+      "m": "Girl_A",
+      "z": "ew",
+      "b": "walk",
+      "height": 1.62,
+      "proposed_asset": "teacher-01",
+      "student_palette": null,
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "杨校医",
+      "g": "女",
+      "r": "校医",
+      "m": "Girl_B",
+      "z": "spine",
+      "b": "walk",
+      "height": 1.58,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "本批无该岗位服装，保留原模型，后续按岗制作"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "张守安",
+      "g": "男",
+      "r": "保安",
+      "m": "Man_Teacher",
+      "z": "gate",
+      "b": "stand",
+      "height": 1.74,
+      "proposed_asset": "security-01",
+      "student_palette": null,
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "孙桂芳",
+      "g": "女",
+      "r": "保洁员",
+      "m": "Girl_B",
+      "z": "main",
+      "b": "walk",
+      "height": 1.56,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "本批无该岗位服装，保留原模型，后续按岗制作"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "李师傅",
+      "g": "男",
+      "r": "食堂厨师",
+      "m": "Boy_C",
+      "z": "colB",
+      "b": "walk",
+      "height": 1.7,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "本批无该岗位服装，保留原模型，后续按岗制作"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "邓老师",
+      "g": "女",
+      "r": "实习老师",
+      "m": "Girl_A",
+      "z": "plaza",
+      "b": "stand",
+      "height": 1.61,
+      "proposed_asset": "teacher-04",
+      "student_palette": null,
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "陈阿姨",
+      "g": "女",
+      "r": "图书角管理员",
+      "m": "Girl_B",
+      "z": "admin",
+      "b": "walk",
+      "height": 1.57,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "本批无该岗位服装，保留原模型，后续按岗制作"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "季小满",
+      "g": "女",
+      "r": "高一学生·领操员",
+      "m": "Girl_A",
+      "z": "exercise",
+      "b": "exercise",
+      "height": 1.65,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "唐堂",
+      "g": "男",
+      "r": "高一学生",
+      "m": "Boy_A",
+      "z": "exercise",
+      "b": "exercise",
+      "height": 1.7,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "宁小苒",
+      "g": "女",
+      "r": "初三学生",
+      "m": "Girl_B",
+      "z": "exercise",
+      "b": "exercise",
+      "height": 1.63,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "石头",
+      "g": "男",
+      "r": "初三学生",
+      "m": "Boy_C",
+      "z": "exercise",
+      "b": "exercise",
+      "height": 1.65,
+      "proposed_asset": "student-03",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "江浪",
+      "g": "男",
+      "r": "高二学生·游泳队",
+      "m": "Boy_A",
+      "z": "swim",
+      "b": "swim",
+      "height": 1.74,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "保留原泳装；本包只有蓝黄校服，不能穿校服下水"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "沈小鱼",
+      "g": "女",
+      "r": "高一学生·游泳队",
+      "m": "Girl_B",
+      "z": "swim",
+      "b": "swim",
+      "height": 1.65,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "保留原泳装；本包只有蓝黄校服，不能穿校服下水"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "方瑞",
+      "g": "男",
+      "r": "高三学生",
+      "m": "Boy_A",
+      "z": "ping1",
+      "b": "stand",
+      "height": 1.78,
+      "proposed_asset": "student-01",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "康小桥",
+      "g": "女",
+      "r": "高二学生",
+      "m": "Girl_A",
+      "z": "ping1",
+      "b": "stand",
+      "height": 1.68,
+      "proposed_asset": "student-04",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "毛豆豆",
+      "g": "男",
+      "r": "初三学生",
+      "m": "Boy_C",
+      "z": "ping2",
+      "b": "stand",
+      "height": 1.65,
+      "proposed_asset": "student-03",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "温书言",
+      "g": "女",
+      "r": "初三学生",
+      "m": "Girl_B",
+      "z": "ping2",
+      "b": "stand",
+      "height": 1.63,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [
+        "本包为高中生外观，初中角色需复核年龄感和身高后使用"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "袁野",
+      "g": "男",
+      "r": "高二学生·足球队",
+      "m": "Boy_C",
+      "z": "footField",
+      "b": "footballer",
+      "height": 1.74,
+      "proposed_asset": "student-03",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "鲁水生",
+      "g": "男",
+      "r": "救生员",
+      "m": "Man_Teacher",
+      "z": "poolDeck",
+      "b": "stand",
+      "height": 1.76,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "本批无该岗位服装，保留原模型，后续按岗制作"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "白教练",
+      "g": "女",
+      "r": "游泳教练",
+      "m": "Girl_A",
+      "z": "poolDeck",
+      "b": "walk",
+      "height": 1.65,
+      "proposed_asset": null,
+      "student_palette": null,
+      "notes": [
+        "女体育教师专用运动服本批未制作，不用日常女教师服代替"
+      ],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "高教练",
+      "g": "男",
+      "r": "篮球教练",
+      "m": "Boy_A",
+      "z": "gymCourt",
+      "b": "stand",
+      "height": 1.78,
+      "proposed_asset": "teacher-03",
+      "student_palette": null,
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "范子骞",
+      "g": "男",
+      "r": "高二学生",
+      "m": "Boy_C",
+      "z": "gymCourt",
+      "b": "jump",
+      "height": 1.74,
+      "proposed_asset": "student-03",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "尹歆玥",
+      "g": "女",
+      "r": "高一学生",
+      "m": "Girl_B",
+      "z": "gymCourt",
+      "b": "jump",
+      "height": 1.65,
+      "proposed_asset": "student-05",
+      "student_palette": "blue_or_yellow_to_assign",
+      "notes": [],
+      "status": "proposal_not_applied"
+    },
+    {
+      "n": "林小雨",
+      "r": "编程向导",
+      "m": "Woman_Teacher",
+      "proposed_asset": "teacher-04",
+      "notes": [
+        "导师姓名、配音、带路状态机保留；原手持物需重校挂点"
+      ],
+      "status": "proposal_not_applied"
+    }
+  ]
+}

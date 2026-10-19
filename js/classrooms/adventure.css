@@ -1,0 +1,47 @@
+.examRoot.advRoot{--ex-accent:#a5e8da;--ex-surface:#142e3d}
+.advRoot .examScene:after{background:linear-gradient(transparent 65%,#051d3266)}
+.advRoot .examViewport{pointer-events:none}
+.advRoot .examCorner{z-index:5}
+.advHelp{z-index:2}
+.advHelp{position:absolute;left:20px;top:20px;width:48px;padding:8px!important;font-size:20px!important}
+.advRoot .advMapNode{position:absolute;transform:translate(-50%,-50%);padding:0;width:58px;height:58px;border-radius:50%;font-size:30px;background:#153c4ede;border:1px solid #91dcdca0;box-shadow:0 0 28px #76dbe333}
+.advRoot .advMapNode.active{background:#b4efdc;color:#123c4c;border-color:#e6fff4;box-shadow:0 0 0 9px #9de9d323,0 0 40px #b6f5df80}
+.advRoot .advMapNode:disabled{opacity:.45}.advRoot .advMapNode.done{background:#64998b;color:white;opacity:.8}
+.advRoot .advMapNode:active{transform:translate(-50%,-50%)}
+.advBrief p{font-size:15px;line-height:1.8;color:#dae7e5}
+.advBrief>.examPrimary{width:100%;margin-top:18px}
+.advBrief .examHint{font-size:12px;color:#b9ccd0}
+.advRoot .advShade{z-index:4}
+.advBlockControls{position:absolute;bottom:max(20px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2}
+.advBlockControls button{min-width:60px;font-size:23px;padding:7px 14px;background:#123647df;touch-action:manipulation}
+.advBlockControls button:last-child{background:var(--ex-accent);color:#153c4c;margin-left:10px}
+.advSelect{display:grid;grid-template-columns:95px 1fr;align-items:center;gap:12px;margin:12px 0;font-size:14px}
+.advSelect select{min-width:0;width:100%;font:inherit;color:#edf6f4;background:#254455;border:1px solid #7eaaab;border-radius:8px;padding:12px;min-height:46px}
+.advFlightInput{position:absolute;inset:80px 0 0;z-index:1;touch-action:none;cursor:crosshair}
+.advHint{position:absolute;bottom:95px;left:50%;transform:translateX(-50%);max-width:90%;padding:12px 18px;background:#163b50ed;border-radius:10px;font-size:14px;z-index:3}
+.advBlockPrompt{position:absolute;top:70px;left:50%;transform:translateX(-50%);max-width:calc(100% - 120px);margin:0;padding:12px 22px;border-radius:10px;background:#071c2b;color:#def5ef;white-space:pre-wrap;overflow-wrap:anywhere;font:16px/1.5 Menlo,Consolas,monospace;pointer-events:none}
+.advRoot .examSaveStatus,.advRoot .examSaveRetry{z-index:6}
+.advRoot[data-phase="fighter"] .examScene:after{display:none}
+.advLaneAssist{position:absolute;bottom:96px;left:50%;transform:translateX(-50%);width:min(500px,calc(100% - 28px));padding:10px 14px;background:#071c2bf0;border-radius:12px;text-align:center;z-index:2}
+.advLaneAssist>span{font-size:13px;display:block;margin-bottom:7px;color:#d9eae5}
+.advLaneAssist>div{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.advLaneAssist button{padding:10px 6px;font-size:18px;font-family:Menlo,monospace}
+@media(max-width:600px){.advHelp{left:14px;top:14px}.advBlockControls{gap:7px;bottom:18px}.advBlockControls button{min-width:56px}.advRoot .advMapNode{width:48px;height:48px;font-size:25px}.advSelect{grid-template-columns:80px 1fr}.advBrief p{font-size:14px}.advRoot .examTaskShade{padding-top:70px}}
+@media(max-height:500px){.advRoot .examTaskShade{padding:12px 75px}.advRoot .advBlockControls{left:auto;right:14px;transform:none;flex-direction:column;gap:5px;bottom:15px}.advBlockControls button{min-height:44px}.advBlockControls button:last-child{margin-left:0}}
+@media(max-width:600px){.advBlockPrompt{top:76px;font-size:14px;max-width:calc(100% - 30px);padding:10px 16px}}
+@media(max-height:500px){.advBlockPrompt{top:78px;left:12px;transform:none;width:180px;max-width:24vw;font-size:12px;padding:10px}}
+@media(max-height:500px){.advLaneAssist{bottom:12px;width:48%;left:48%}}
+
+.advFlightScoreNote{position:absolute;left:50%;top:20px;transform:translateX(-50%);max-width:calc(100% - 150px);padding:8px 14px;border-radius:8px;background:#071c2be6;color:#e1efe8;font-size:13px;text-align:center;pointer-events:none;z-index:2}.advRoot .advMapNode{font-size:22px;min-width:70px}.advLaneChoice{font-size:clamp(16px,3vw,24px)!important;min-width:0}.advNextPreview{animation:nextBlockPreview .5s ease-out}@keyframes nextBlockPreview{from{opacity:.3;transform:translate(-50%,6px)}to{opacity:1;transform:translate(-50%,0)}}@media(prefers-reduced-motion:reduce){.advNextPreview{animation:none}}
+.advInstantFeedback{margin-top:16px;padding:14px 16px;border-radius:10px;border:1px solid}
+.advInstantFeedback.ok{background:#17352a22;border-color:#2f7d5c}
+.advInstantFeedback.no{background:#3a242022;border-color:#a05c48}
+.advInstantFeedback strong{display:block;font-size:15px;margin-bottom:6px}
+.advInstantFeedback.ok strong{color:#3f9068}
+.advInstantFeedback.no strong{color:#c2705a}
+.advInstantFeedback .ex{font-size:13px;line-height:1.8;color:var(--ink,#20342f)}
+.advInstantFeedback button{margin-top:10px}
+.advBlocksTour{margin:14px 0;padding:14px 16px;border:1px solid #2f7d5c66;border-left:4px solid #2f7d5c;border-radius:10px;background:#17352a14}
+.advBlocksTour strong{display:block;font-size:15px;margin-bottom:8px}
+.advBlocksTour ol{margin:0;padding-left:20px}
+.advBlocksTour li{font-size:13.5px;line-height:1.9;margin:2px 0}

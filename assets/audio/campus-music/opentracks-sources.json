@@ -1,0 +1,26 @@
+[
+  {
+    "id": "morning",
+    "page": "https://opentracks.com/bgm/detail/2445/download",
+    "track": 2,
+    "downloadMethod": "Official download form POST; signed redirect not retained",
+    "bytes": 2932598,
+    "sha256": "81865d665889dcbe3b12d70f68cef9aae2953a015acff260236d1556db6eff53"
+  },
+  {
+    "id": "afternoon",
+    "page": "https://opentracks.com/bgm/detail/4695/download",
+    "track": 1,
+    "downloadMethod": "Official download form POST; signed redirect not retained",
+    "bytes": 5674736,
+    "sha256": "b3be5e54383b778ac1cd25ae21bc3597039989100853903dfe83d3a10ff471e4"
+  },
+  {
+    "id": "summer-triangle",
+    "page": "https://opentracks.com/bgm/detail/12983/download",
+    "track": 1,
+    "downloadMethod": "Official download form POST; signed redirect not retained",
+    "bytes": 5131258,
+    "sha256": "2b821aa301e4867856bcbc994af83a52652b38dd59e4fc5b0704e0e81f4459fe"
+  }
+]

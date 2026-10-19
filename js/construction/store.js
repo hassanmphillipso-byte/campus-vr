@@ -1,0 +1,12 @@
+import {assertSaveCurrent} from '../save_session.js';
+import {CONSTRUCTION_KEY as KEY,FACILITIES,TASK_IDS,rewardRecords,balance} from './catalog.js';
+export const emptyState=()=>({version:1,revision:0,awards:{},purchases:{}});
+function parse(raw){if(raw===null)return emptyState();let s;try{s=JSON.parse(raw);}catch{throw Error('建设存档无法读取，原数据已保留');}if(s?.version!==1||!Number.isSafeInteger(s.revision)||s.revision<0||!s.awards||typeof s.awards!=='object'||Array.isArray(s.awards)||!s.purchases||typeof s.purchases!=='object'||Array.isArray(s.purchases))throw Error('建设存档格式无效，原数据已保留');const allowed=rewardRecords({tasks:Object.fromEntries(TASK_IDS.map(id=>[id,3])),submitted:{1:true,2:true,3:true}});for(const [id,a] of Object.entries(s.awards))if(!Object.hasOwn(allowed,id)||a?.amount!==allowed[id].amount)throw Error('建设奖励记录无效');for(const [id,a] of Object.entries(s.purchases)){const v=FACILITIES.find(v=>v.id===id);if(!v||a?.cost!==v.cost)throw Error('建设消费记录无效');}if(balance(s)<0)throw Error('建设账本余额异常');return s;}
+export function createConstructionStore({storage=globalThis.localStorage,locks=globalThis.navigator?.locks,changed=()=>{}}={}){
+ const read=()=>parse(storage.getItem(KEY));
+ async function transaction(work){if(!locks?.request)throw Error('当前浏览器不支持安全建设存档，请使用新版 Chrome 或 Edge');return locks.request(KEY,{mode:'exclusive'},async()=>{assertSaveCurrent(storage);const before=read(),next=structuredClone(before);const result=await work(next);if(JSON.stringify(before)!==JSON.stringify(next)){next.revision++;try{assertSaveCurrent(storage);storage.setItem(KEY,JSON.stringify(next));}catch{throw Error('保存失败，本次奖励或建设未生效，请检查浏览器存储空间');}changed(structuredClone(next));}return result;});}
+ return {getConstructionState:read,
+ async syncLearningRewards(){return transaction(s=>{let source;try{source=JSON.parse(storage.getItem('campusPy1')||'{}');}catch{throw Error('学习记录读取失败，未改动原成绩');}let gained=0;for(const [id,r] of Object.entries(rewardRecords(source)))if(!s.awards[id]){s.awards[id]={...r,earnedAt:new Date().toISOString()};gained+=r.amount;}return gained;});},
+ async purchaseFacility(id,prepare){return transaction(async s=>{const v=FACILITIES.find(v=>v.id===id);if(!v)throw Error('不存在的场馆');if(s.purchases[id])throw Error('该场馆已经建设');if(balance(s)<v.cost)throw Error('金币不足，先完成学习任务');if(typeof prepare!=='function')throw Error('建设模型尚未准备');await prepare(v);s.purchases[id]={cost:v.cost,builtAt:new Date().toISOString()};return v;});}
+ };
+}

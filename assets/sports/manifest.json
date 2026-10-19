@@ -1,0 +1,102 @@
+{
+  "assets": [
+    {
+      "id": "basketball",
+      "file": "basketball.glb",
+      "source": "source/Basketball.blend",
+      "author": "ks_gameassets",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/sport-bundle",
+      "triangles": 5680,
+      "bytes": 178980,
+      "sha256": "92bdf526d356877f499ac4fde862d58450c765d13bd60c1554e5431b7f4580e7",
+      "sourceSha256": "52889729210d1f26d0ca74c82fc38c150c0c86285cf9c71b64f6249be4202924",
+      "normalizedRadius": 1,
+      "coordinateSystem": "GLTF +Y up; metres except unit-radius ball prototypes"
+    },
+    {
+      "id": "football",
+      "file": "football.glb",
+      "source": "source/Football.blend",
+      "author": "ks_gameassets",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/sport-bundle",
+      "triangles": 13888,
+      "bytes": 253304,
+      "sha256": "1b4fb6c9694e5819101ee3ee23eb0336f27c5f1dfa608eaf9ebba47173212e34",
+      "sourceSha256": "76327890efbb0a5f092d7041dc14377faf2c80411706056c965b9ce48f16ef5a",
+      "normalizedRadius": 1,
+      "coordinateSystem": "GLTF +Y up; metres except unit-radius ball prototypes"
+    },
+    {
+      "id": "handball",
+      "file": "handball.glb",
+      "source": "source/Handball.blend",
+      "author": "ks_gameassets",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/sport-bundle",
+      "triangles": 13888,
+      "bytes": 253432,
+      "sha256": "8388c78980072e84df33631fa9ff99032282f7b987d61ec4c2916b9c51ed5d03",
+      "sourceSha256": "c3d626025291a1bd4a89bafac773dbe7fdb579f221acb09d7366f4bf1e557b5c",
+      "normalizedRadius": 1,
+      "coordinateSystem": "GLTF +Y up; metres except unit-radius ball prototypes"
+    },
+    {
+      "id": "volleyball",
+      "file": "volleyball.glb",
+      "source": "source/Volleyball.blend",
+      "author": "ks_gameassets",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/sport-bundle",
+      "triangles": 4032,
+      "bytes": 117020,
+      "sha256": "f802a2412b236d7f96111a6cd3b77b2f03c1f070362f97e136fa5a336c0d8cd8",
+      "sourceSha256": "bb7c0e1accc6030fc986f560414527d3f05155f044ded88e6a70ecfd2c6c1b86",
+      "normalizedRadius": 1,
+      "coordinateSystem": "GLTF +Y up; metres except unit-radius ball prototypes"
+    },
+    {
+      "id": "table-tennis-table",
+      "file": "table-tennis-table.glb",
+      "source": "source/TableTennis.blend",
+      "author": "RayB2",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/table-tennis-set",
+      "triangles": 466,
+      "bytes": 29224,
+      "sha256": "d2552e350f4b2f83d1b0a63b22dc6e9acfe46d48b870a04e9c796d68d4c4c370",
+      "sourceSha256": "755b9361724836e99df508841fddce1fa3f3a15d4ee25935ef80644f7aa8a73e",
+      "normalizedRadius": null,
+      "coordinateSystem": "GLTF +Y up; metres except unit-radius ball prototypes"
+    },
+    {
+      "id": "table-tennis-paddle",
+      "file": "table-tennis-paddle.glb",
+      "source": "source/TableTennis.blend",
+      "author": "RayB2",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/table-tennis-set",
+      "triangles": 176,
+      "bytes": 10548,
+      "sha256": "925ea715e4c49526c8606664fec6bb1ce2caf8c5b409d957789f995a463a9774",
+      "sourceSha256": "755b9361724836e99df508841fddce1fa3f3a15d4ee25935ef80644f7aa8a73e",
+      "normalizedRadius": null,
+      "coordinateSystem": "GLTF +Y up; metres except unit-radius ball prototypes"
+    },
+    {
+      "id": "table-tennis-ball",
+      "file": "table-tennis-ball.glb",
+      "source": "source/TableTennis.blend",
+      "author": "RayB2",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/table-tennis-set",
+      "triangles": 224,
+      "bytes": 5176,
+      "sha256": "1af9e6d62c1c33d322a835c905cce1c38613a895b39e979167843905a9d6b23e",
+      "sourceSha256": "755b9361724836e99df508841fddce1fa3f3a15d4ee25935ef80644f7aa8a73e",
+      "normalizedRadius": 1,
+      "coordinateSystem": "GLTF +Y up; metres except unit-radius ball prototypes"
+    }
+  ]
+}

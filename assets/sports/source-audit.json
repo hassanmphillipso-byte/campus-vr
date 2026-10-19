@@ -1,0 +1,955 @@
+[
+  {
+    "source": "Basketball",
+    "objects": [
+      {
+        "name": "Sphere",
+        "vertices": 2842,
+        "z_levels": [
+          [
+            0.1197,
+            92
+          ],
+          [
+            -0.1197,
+            92
+          ],
+          [
+            0.0,
+            80
+          ],
+          [
+            0.1198,
+            64
+          ],
+          [
+            -0.1198,
+            64
+          ],
+          [
+            0.1196,
+            57
+          ],
+          [
+            -0.1196,
+            57
+          ],
+          [
+            0.0771,
+            56
+          ],
+          [
+            -0.0771,
+            56
+          ],
+          [
+            0.1123,
+            40
+          ],
+          [
+            0.086,
+            40
+          ],
+          [
+            0.0859,
+            40
+          ]
+        ],
+        "dimensions": [
+          0.23716823756694794,
+          0.23716820776462555,
+          0.2398730218410492
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "Material.001",
+          "Material.002"
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "Dots Stroke",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "FRAME",
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "BSDF_DIFFUSE"
+        ]
+      },
+      {
+        "name": "Material",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED"
+        ]
+      },
+      {
+        "name": "Material.001",
+        "color": [
+          1.0,
+          0.21586021780967712,
+          0.0,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "NORMAL_MAP"
+        ]
+      },
+      {
+        "name": "Material.002",
+        "color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "NORMAL_MAP"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "Render Result",
+        "path": "",
+        "size": [
+          0,
+          0
+        ],
+        "packed": false
+      }
+    ]
+  },
+  {
+    "source": "Football",
+    "objects": [
+      {
+        "name": "Solid",
+        "vertices": 7008,
+        "z_levels": [
+          [
+            -0.0,
+            68
+          ],
+          [
+            0.0356,
+            22
+          ],
+          [
+            -0.0356,
+            22
+          ],
+          [
+            0.0222,
+            20
+          ],
+          [
+            -0.0097,
+            20
+          ],
+          [
+            0.0097,
+            20
+          ],
+          [
+            0.0324,
+            20
+          ],
+          [
+            -0.0324,
+            20
+          ],
+          [
+            0.0758,
+            19
+          ],
+          [
+            0.029,
+            19
+          ],
+          [
+            -0.0222,
+            18
+          ],
+          [
+            0.0387,
+            18
+          ]
+        ],
+        "dimensions": [
+          0.2199999988079071,
+          0.2199999988079071,
+          0.2199999988079071
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "Material.001",
+          "Material.002"
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "Dots Stroke",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "FRAME",
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "BSDF_DIFFUSE"
+        ]
+      },
+      {
+        "name": "Material",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED"
+        ]
+      },
+      {
+        "name": "Material.001",
+        "color": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "NORMAL_MAP"
+        ]
+      },
+      {
+        "name": "Material.002",
+        "color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "NORMAL_MAP"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "Render Result",
+        "path": "",
+        "size": [
+          0,
+          0
+        ],
+        "packed": false
+      }
+    ]
+  },
+  {
+    "source": "Handball",
+    "objects": [
+      {
+        "name": "Solid",
+        "vertices": 7008,
+        "z_levels": [
+          [
+            -0.0,
+            68
+          ],
+          [
+            -0.0192,
+            22
+          ],
+          [
+            0.0192,
+            22
+          ],
+          [
+            -0.0296,
+            22
+          ],
+          [
+            0.0296,
+            22
+          ],
+          [
+            -0.0221,
+            21
+          ],
+          [
+            -0.028,
+            21
+          ],
+          [
+            -0.0631,
+            20
+          ],
+          [
+            0.0221,
+            20
+          ],
+          [
+            -0.0694,
+            18
+          ],
+          [
+            -0.0229,
+            18
+          ],
+          [
+            -0.0138,
+            18
+          ]
+        ],
+        "dimensions": [
+          0.1899999976158142,
+          0.1899999976158142,
+          0.1899999976158142
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "Material.001",
+          "Material.002"
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "Dots Stroke",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "FRAME",
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "BSDF_DIFFUSE"
+        ]
+      },
+      {
+        "name": "Material",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED"
+        ]
+      },
+      {
+        "name": "Material.001",
+        "color": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "NORMAL_MAP"
+        ]
+      },
+      {
+        "name": "Material.002",
+        "color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "NORMAL_MAP"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "Render Result",
+        "path": "",
+        "size": [
+          0,
+          0
+        ],
+        "packed": false
+      }
+    ]
+  },
+  {
+    "source": "Volleyball",
+    "objects": [
+      {
+        "name": "Cube",
+        "vertices": 2018,
+        "z_levels": [
+          [
+            0.0,
+            80
+          ],
+          [
+            0.072,
+            12
+          ],
+          [
+            0.0686,
+            12
+          ],
+          [
+            -0.072,
+            12
+          ],
+          [
+            -0.0686,
+            12
+          ],
+          [
+            0.0624,
+            12
+          ],
+          [
+            -0.0624,
+            12
+          ],
+          [
+            -0.0153,
+            10
+          ],
+          [
+            0.0153,
+            10
+          ],
+          [
+            0.0658,
+            8
+          ],
+          [
+            -0.0658,
+            8
+          ],
+          [
+            0.0737,
+            8
+          ]
+        ],
+        "dimensions": [
+          0.20313437283039093,
+          0.20313437283039093,
+          0.20313437283039093
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "Material.001"
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "Dots Stroke",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "FRAME",
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "BSDF_DIFFUSE"
+        ]
+      },
+      {
+        "name": "Material",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED"
+        ]
+      },
+      {
+        "name": "Material.001",
+        "color": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL",
+          "NORMAL_MAP"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "Render Result",
+        "path": "",
+        "size": [
+          0,
+          0
+        ],
+        "packed": false
+      }
+    ]
+  },
+  {
+    "source": "TableTennis",
+    "objects": [
+      {
+        "name": "table",
+        "vertices": 508,
+        "z_levels": [
+          [
+            0.0481,
+            142
+          ],
+          [
+            0.1552,
+            142
+          ],
+          [
+            -0.5863,
+            32
+          ],
+          [
+            0.028,
+            32
+          ],
+          [
+            -0.2686,
+            16
+          ],
+          [
+            -0.3169,
+            16
+          ],
+          [
+            0.0411,
+            16
+          ],
+          [
+            0.0139,
+            16
+          ],
+          [
+            -0.001,
+            16
+          ],
+          [
+            0.1354,
+            16
+          ],
+          [
+            0.015,
+            16
+          ],
+          [
+            0.1583,
+            12
+          ]
+        ],
+        "dimensions": [
+          2.2135009765625,
+          1.4673247337341309,
+          0.7445796728134155
+        ],
+        "location": [
+          -0.19497118890285492,
+          0.45472556352615356,
+          -0.29864585399627686
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "Material"
+        ]
+      },
+      {
+        "name": "red paddle",
+        "vertices": 156,
+        "z_levels": [
+          [
+            0.1574,
+            64
+          ],
+          [
+            0.163,
+            64
+          ],
+          [
+            0.1502,
+            4
+          ],
+          [
+            0.1693,
+            4
+          ],
+          [
+            0.1528,
+            2
+          ],
+          [
+            0.1478,
+            2
+          ],
+          [
+            0.1504,
+            2
+          ],
+          [
+            0.1667,
+            2
+          ],
+          [
+            0.1717,
+            2
+          ],
+          [
+            0.1691,
+            2
+          ],
+          [
+            0.1578,
+            2
+          ],
+          [
+            0.1597,
+            2
+          ]
+        ],
+        "dimensions": [
+          0.16195237636566162,
+          0.023989295586943626,
+          0.25936728715896606
+        ],
+        "location": [
+          -0.3406253457069397,
+          -0.020543213933706284,
+          0.15974554419517517
+        ],
+        "rotation": [
+          1.5707963705062866,
+          -0.0,
+          -0.8452428579330444
+        ],
+        "scale": [
+          0.06209002807736397,
+          0.06209002807736397,
+          0.06209002807736397
+        ],
+        "materials": [
+          "Material"
+        ]
+      },
+      {
+        "name": "blue paddle",
+        "vertices": 156,
+        "z_levels": [
+          [
+            0.1574,
+            64
+          ],
+          [
+            0.163,
+            64
+          ],
+          [
+            0.1502,
+            4
+          ],
+          [
+            0.1693,
+            4
+          ],
+          [
+            0.1528,
+            2
+          ],
+          [
+            0.1478,
+            2
+          ],
+          [
+            0.1504,
+            2
+          ],
+          [
+            0.1667,
+            2
+          ],
+          [
+            0.1717,
+            2
+          ],
+          [
+            0.1691,
+            2
+          ],
+          [
+            0.1578,
+            2
+          ],
+          [
+            0.1597,
+            2
+          ]
+        ],
+        "dimensions": [
+          0.16195237636566162,
+          0.023989295586943626,
+          0.2593672573566437
+        ],
+        "location": [
+          0.5943599939346313,
+          0.0,
+          0.15974554419517517
+        ],
+        "rotation": [
+          1.5707963705062866,
+          -0.0,
+          2.2702178955078125
+        ],
+        "scale": [
+          0.06209002807736397,
+          0.06209002807736397,
+          0.06209002807736397
+        ],
+        "materials": [
+          "Material"
+        ]
+      },
+      {
+        "name": "ball",
+        "vertices": 114,
+        "z_levels": [
+          [
+            0.1974,
+            16
+          ],
+          [
+            0.1921,
+            16
+          ],
+          [
+            0.1795,
+            16
+          ],
+          [
+            0.1706,
+            16
+          ],
+          [
+            0.201,
+            16
+          ],
+          [
+            0.1858,
+            16
+          ],
+          [
+            0.1742,
+            16
+          ],
+          [
+            0.2022,
+            1
+          ],
+          [
+            0.1693,
+            1
+          ]
+        ],
+        "dimensions": [
+          0.0328931100666523,
+          0.032893106341362,
+          0.03289312124252319
+        ],
+        "location": [
+          -0.2924862504005432,
+          -0.0324566476047039,
+          0.18578197062015533
+        ],
+        "rotation": [
+          0.0,
+          -0.0,
+          -0.8452428579330444
+        ],
+        "scale": [
+          0.053958531469106674,
+          0.053958531469106674,
+          0.053958531469106674
+        ],
+        "materials": []
+      }
+    ],
+    "materials": [
+      {
+        "name": "Material",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED",
+          "TEX_IMAGE"
+        ]
+      },
+      {
+        "name": "Material.001",
+        "color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "nodes": true,
+        "node_types": [
+          "OUTPUT_MATERIAL",
+          "BSDF_PRINCIPLED"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "low poly vhs textures.png",
+        "path": "//../textures/mine/low poly vhs textures.png",
+        "size": [
+          128,
+          128
+        ],
+        "packed": true
+      }
+    ]
+  }
+]

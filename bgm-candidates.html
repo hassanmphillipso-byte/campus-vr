@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>校园配乐试听 · 阳光中学</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#243731;background:#f4f2e9;font-synthesis:none}*{box-sizing:border-box}body{margin:0}main{max-width:1180px;margin:auto;padding:40px 28px 80px}a{color:#226955;text-underline-offset:4px}header{border-bottom:1px solid #cdd3c6;padding:16px 0 30px;display:grid;grid-template-columns:1fr 330px;gap:30px}.eyebrow{font-size:12px;letter-spacing:.16em;color:#52776a}h1{font-size:clamp(30px,5vw,48px);font-weight:650;letter-spacing:-.04em;margin:15px 0}header p{line-height:1.8;color:#5c6b60;max-width:630px;font-size:14px}.pick{border-left:3px solid #4b8067;padding:0 0 0 20px;align-self:center;font-size:14px;line-height:1.8}.pick strong{display:block;margin-bottom:7px}.topline{display:flex;gap:20px;justify-content:space-between;align-items:center;font-size:13px}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 16px}button{font:inherit;cursor:pointer}.filter{border:1px solid #c5cfbf;background:transparent;color:#466454;border-radius:20px;padding:9px 15px}.filter[aria-pressed=true]{background:#294d3f;border-color:#294d3f;color:white}.count{font-size:13px;color:#607367;margin:12px 0 18px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#fcfbf6;border:1px solid #d9ddd1;border-radius:13px;padding:23px;display:flex;flex-direction:column;min-height:340px}.card[hidden]{display:none}.tag{font-size:11px;font-weight:650;color:#6b7351;letter-spacing:.05em}.card.recommended{border-top:3px solid #63866a;padding-top:21px}h2{font-size:21px;line-height:1.35;margin:12px 0 7px;font-weight:650;overflow-wrap:anywhere}.by{font-size:12px;color:#788376}.note{font-size:14px;line-height:1.75;margin:18px 0 8px}.loop{font-size:11px;line-height:1.5;color:#7f8779;margin:0 0 18px}audio{width:100%;height:38px;margin:7px 0}.play{margin-top:auto}.external{display:inline-block;border:1px solid #afc1ae;padding:10px 15px;border-radius:7px;font-size:13px;text-decoration:none;background:#eff3e9}.links{display:flex;gap:12px;margin-top:14px;font-size:11px}.license{font-size:11px;line-height:1.6;margin-top:12px;color:#73816c}.foot{margin-top:35px;border-top:1px solid #cdd3c6;padding-top:20px;line-height:1.9;font-size:12px;color:#697963}.error{color:#a53b2e}.volume{display:flex;align-items:center;gap:8px;font-size:13px;margin-top:22px}.volume input{width:150px;accent-color:#456b53}.now{font-size:12px;min-height:20px;color:#226955;margin:12px 0 0}@media(max-width:850px){header{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pick{max-width:600px}}@media(max-width:540px){main{padding:20px 18px 60px}.grid{grid-template-columns:1fr}.card{min-height:310px}.topline{align-items:flex-start}.filters{gap:7px}.filter{padding:8px 12px}.volume{flex-wrap:wrap}}
+</style>
+<main>
+<div class="topline"><span class="eyebrow">阳光中学 / 声音候选</span><a href="classrooms.html">返回教室</a></div>
+<header><div><h1>为校园挑选声音</h1><p>16 首候选，覆盖校园漫游、教室学习、安静区域与体育训练。按作者官方曲风说明初筛，先试听，再选适合你画面的声音。</p><div class="volume"><label for="volume">试听音量</label><input id="volume" type="range" min="0" max="1" value="0.25" step="0.01"><output id="volume-value">25%</output><button class="filter" id="stop">全部暂停</button></div><p class="now" id="now" role="status">点击任意播放器开始试听。</p></div><aside class="pick"><strong>建议先比较这几首</strong>校园：Morning / 昼下がり気分<br>教室：Easy Lemon<br>安静区域：Clear Air / Dream Culture<br>体育训练：Electrodoodle</aside></header>
+<nav class="filters" aria-label="按场景筛选"></nav><p class="count" id="count" role="status">正在读取曲目…</p><section class="grid" id="tracks" aria-label="曲目列表"></section>
+<footer class="foot">13 首已保存在本地，可直接试听；3 首 OpenTracks 曲目通过官方页面试听。曲目保留原始音量，试听页默认 25%，一次只播放一首。<br>这里是配乐候选页，试听不会修改游戏音乐。仅标明作者确认的循环版本，其余尚未进行无缝循环制作。<br>CC BY 4.0 曲目需要署名；CC0 无强制署名；OpenTracks 以素材许可和作者条件为准。<a href="assets/audio/bgm-candidates/CREDITS.md" target="_blank" rel="noopener">完整来源与署名</a></footer>
+</main>
+<script type="module">
+const grid=document.querySelector('#tracks'),count=document.querySelector('#count'),now=document.querySelector('#now'),volume=document.querySelector('#volume');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let all=[],audios=[];
+// 释放上一首的媒体加载连接，避免多首暂停流占满浏览器同源连接池。
+const pauseAll=except=>audios.forEach(a=>{if(a!==except){a.pause();if(except&&a.currentSrc)a.load();}});
+document.querySelector('#stop').onclick=()=>{pauseAll();now.textContent='已暂停所有本地曲目。'};
+volume.oninput=()=>{document.querySelector('#volume-value').textContent=Math.round(volume.value*100)+'%';audios.forEach(a=>a.volume=Number(volume.value));};
+try{
+ const response=await fetch('assets/audio/bgm-candidates/manifest.json');if(!response.ok)throw Error('曲目清单读取失败');
+ const data=await response.json();all=data.tracks;
+ all.sort((a,b)=>Number(b.recommended)-Number(a.recommended));
+ for(const t of all){
+  const card=document.createElement('article');card.className='card'+(t.recommended?' recommended':'');card.dataset.scene=t.scene;card.dataset.recommended=String(t.recommended);
+  card.innerHTML=`<div class="tag">${t.recommended?'优先试听 · ':''}${esc(t.role)}</div><h2>${esc(t.title)}</h2><div class="by">${esc(t.author)} · ${esc(t.duration)}${t.bpm?' · '+esc(t.bpm)+' BPM':''}</div><p class="note">${esc(t.note)}</p><p class="loop">${esc(t.loop)}</p><div class="play">${t.file?`<audio controls preload="none" aria-label="试听 ${esc(t.title)}" src="assets/audio/bgm-candidates/${esc(t.file)}"></audio>`:`<a class="external" href="${esc(t.source)}" target="_blank" rel="noopener">去官方页面试听 ↗</a>`}<div class="links"><a href="${esc(t.source)}" target="_blank" rel="noopener">原曲与下载</a><a href="${esc(t.licenseUrl)}" target="_blank" rel="noopener">许可说明</a></div><div class="license">${esc(t.license)}</div></div>`;
+  grid.append(card);
+  const audio=card.querySelector('audio');if(audio){audio.volume=Number(volume.value);audios.push(audio);audio.addEventListener('play',()=>{pauseAll(audio);now.textContent='正在试听：'+t.title+' · '+t.author;});audio.addEventListener('error',()=>{now.textContent='音频加载失败，请使用该曲的官方入口。';});}
+ }
+ const options=['全部','优先试听','校园漫游','教室学习','安静区域','体育训练','知识方块','战机护航'];
+ for(const label of options){const button=document.createElement('button');button.className='filter';button.textContent=label;button.setAttribute('aria-pressed',String(label==='全部'));button.onclick=()=>{pauseAll();document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));let shown=0;grid.querySelectorAll('.card').forEach(card=>{card.hidden=!(label==='全部'||label==='优先试听'&&card.dataset.recommended==='true'||label===card.dataset.scene);if(!card.hidden)shown++;});count.textContent=`${label} · ${shown} 首`;now.textContent='已切换分类，点击曲目试听。';};document.querySelector('nav').append(button);}
+ count.textContent=`全部 · ${all.length} 首 / ${audios.length} 首本地试听`;
+}catch(e){count.className='count error';count.textContent='无法读取曲目，请从 localhost:8790 打开此页。';}
+</script>
+</html>

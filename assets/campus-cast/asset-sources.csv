@@ -1,0 +1,8 @@
+asset,author,source,usage_note
+Male.vrm,hinzka and VRoid/pixiv,https://github.com/hinzka/52blendshapes-for-VRoid-face,current README permits modification and redistribution; pixiv conditions apply; not CC0
+Female.vrm,hinzka and VRoid/pixiv,https://github.com/hinzka/52blendshapes-for-VRoid-face,current README permits modification and redistribution; pixiv conditions apply; not CC0
+six-character concept,imagegen,source/reference/六人概念图.png,AI generated concept approved in chat; not a 3D render
+uniform adaptation,Codex,scripts/build_students.py,AI-assisted Blender geometry/texture adaptation of licensed VRoid garment meshes
+ponytail and fringe,Codex,scripts/build_students.py,procedural editable weighted mesh
+VRM add-on,saturday06 and contributors,https://github.com/saturday06/VRM-Addon-for-Blender,4.7.2; MIT OR GPL-3.0-or-later
+v0.2 cast and baked motions,Codex,scripts/build_cast.py,AI-assisted adaptation of the same licensed bases; 12 people and 18 outfit variants; procedural in-place animation

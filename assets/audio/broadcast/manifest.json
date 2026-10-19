@@ -1,0 +1,525 @@
+{
+ "voice": "qwen3-tts-voicedesign-broadcast-v1",
+ "types": {
+  "morning": [
+   {
+    "id": "morning-01",
+    "file": "morning-01.m4a",
+    "ms": 8320,
+    "text": "同学们早上好，校园广播站开始今天的第一次播音。愿你带着好心情走进教室。"
+   },
+   {
+    "id": "morning-02",
+    "file": "morning-02.m4a",
+    "ms": 8160,
+    "text": "早安，阳光中学。新的一天，从一声问好开始，从一节好课开始。"
+   },
+   {
+    "id": "morning-03",
+    "file": "morning-03.m4a",
+    "ms": 7920,
+    "text": "早晨好，今天是崭新的一天，广播站提醒你：整理好书本，也整理好心情。"
+   },
+   {
+    "id": "morning-04",
+    "file": "morning-04.m4a",
+    "ms": 6720,
+    "text": "同学们早，清晨的校园最适合读书声，愿你今天的每一节课都有收获。"
+   },
+   {
+    "id": "morning-05",
+    "file": "morning-05.m4a",
+    "ms": 8480,
+    "text": "早上好，校园广播准时相伴。记得吃早餐，元气满满迎接第一节课。"
+   },
+   {
+    "id": "morning-06",
+    "file": "morning-06.m4a",
+    "ms": 6080,
+    "text": "早安，广播站向你问好。今天也要记得对老师和同学微笑哦。"
+   },
+   {
+    "id": "morning-07",
+    "file": "morning-07.m4a",
+    "ms": 6560,
+    "text": "清晨的阳光洒进校园，广播站祝同学们度过充实的一天。"
+   },
+   {
+    "id": "morning-08",
+    "file": "morning-08.m4a",
+    "ms": 7120,
+    "text": "早上好，愿你像今天升起的太阳一样，精神饱满，步履轻快。"
+   },
+   {
+    "id": "morning-09",
+    "file": "morning-09.m4a",
+    "ms": 6240,
+    "text": "新的早晨，新的起点。校园广播祝你学习顺利，心情晴朗。"
+   },
+   {
+    "id": "morning-10",
+    "file": "morning-10.m4a",
+    "ms": 6640,
+    "text": "同学们早上好，广播站温馨提示：上课铃响前，请提前回到座位。"
+   },
+   {
+    "id": "morning-11",
+    "file": "morning-11.m4a",
+    "ms": 7440,
+    "text": "早安，校园的清晨因为你们的读书声而生动。祝你今天学有所得。"
+   },
+   {
+    "id": "morning-12",
+    "file": "morning-12.m4a",
+    "ms": 6160,
+    "text": "早上好，广播站开始播音。愿今天的你，比昨天更进一步。"
+   }
+  ],
+  "break": [
+   {
+    "id": "break-01",
+    "file": "break-01.m4a",
+    "ms": 12000,
+    "text": "下课时间到了，广播站提醒你：起身活动，眺望远方，让眼睛休息片刻。"
+   },
+   {
+    "id": "break-02",
+    "file": "break-02.m4a",
+    "ms": 7120,
+    "text": "课间十分钟，安全记心中。走廊里轻声慢步，不追逐不打闹。"
+   },
+   {
+    "id": "break-03",
+    "file": "break-03.m4a",
+    "ms": 5280,
+    "text": "又到了课间休息，喝口水，伸个懒腰，下节课更有精神。"
+   },
+   {
+    "id": "break-04",
+    "file": "break-04.m4a",
+    "ms": 6400,
+    "text": "大课间时间到，欢迎同学们到操场活动，广播站为你加油。"
+   },
+   {
+    "id": "break-05",
+    "file": "break-05.m4a",
+    "ms": 6320,
+    "text": "下课啦，愿课间的风带走疲惫，愿你带着笑容走进下一节课。"
+   },
+   {
+    "id": "break-06",
+    "file": "break-06.m4a",
+    "ms": 6800,
+    "text": "课间温馨提示：远眺绿树，放松双眼，保护视力从现在做起。"
+   },
+   {
+    "id": "break-07",
+    "file": "break-07.m4a",
+    "ms": 5840,
+    "text": "广播站提醒：课间文明休息，礼让同学，安全第一。"
+   },
+   {
+    "id": "break-08",
+    "file": "break-08.m4a",
+    "ms": 6560,
+    "text": "下课铃声响起，去窗外看看天空吧，回来时又是专注的模样。"
+   },
+   {
+    "id": "break-09",
+    "file": "break-09.m4a",
+    "ms": 8480,
+    "text": "课间到了，和同学聊聊天、散散步，校园生活就是这些小小美好。"
+   },
+   {
+    "id": "break-10",
+    "file": "break-10.m4a",
+    "ms": 5360,
+    "text": "大课间活动时间，请各班有序前往操场，注意队伍整齐。"
+   },
+   {
+    "id": "break-11",
+    "file": "break-11.m4a",
+    "ms": 4080,
+    "text": "下课休息，广播站陪你度过轻松十分钟。"
+   },
+   {
+    "id": "break-12",
+    "file": "break-12.m4a",
+    "ms": 6560,
+    "text": "课间十分钟，广播站小提醒：提前做好下节课的准备哦。"
+   }
+  ],
+  "rainstart": [
+   {
+    "id": "rainstart-01",
+    "file": "rainstart-01.m4a",
+    "ms": 5280,
+    "text": "下雨了，广播站提醒同学们：关好教室门窗，收好阳台衣物。"
+   },
+   {
+    "id": "rainstart-02",
+    "file": "rainstart-02.m4a",
+    "ms": 11360,
+    "text": "雨来了，路面湿滑，走廊慢行，课间减少户外活动。"
+   },
+   {
+    "id": "rainstart-03",
+    "file": "rainstart-03.m4a",
+    "ms": 7280,
+    "text": "校园开始落雨，请带好雨具，上下楼梯注意脚下安全。"
+   },
+   {
+    "id": "rainstart-04",
+    "file": "rainstart-04.m4a",
+    "ms": 7520,
+    "text": "听，雨点敲响了校园。广播站提醒你：添件外衣，别着凉。"
+   },
+   {
+    "id": "rainstart-05",
+    "file": "rainstart-05.m4a",
+    "ms": 5680,
+    "text": "雨天到访，操场活动改为室内进行，请同学们有序安排。"
+   },
+   {
+    "id": "rainstart-06",
+    "file": "rainstart-06.m4a",
+    "ms": 4720,
+    "text": "外面下雨啦，没带伞的同学也不要着急，雨停再走不迟。"
+   },
+   {
+    "id": "rainstart-07",
+    "file": "rainstart-07.m4a",
+    "ms": 7040,
+    "text": "雨声淅沥，广播站陪你安静学习。记得提醒同伴收好窗边的书本。"
+   },
+   {
+    "id": "rainstart-08",
+    "file": "rainstart-08.m4a",
+    "ms": 5920,
+    "text": "降雨提示：雨天路滑，请不要在走廊奔跑，安全第一。"
+   },
+   {
+    "id": "rainstart-09",
+    "file": "rainstart-09.m4a",
+    "ms": 9920,
+    "text": "雨中的校园别有一番风景，但广播站还是要提醒：注意保暖防滑。"
+   },
+   {
+    "id": "rainstart-10",
+    "file": "rainstart-10.m4a",
+    "ms": 4400,
+    "text": "下雨了，运动场地湿滑，课间请留在室内活动。"
+   }
+  ],
+  "rainend": [
+   {
+    "id": "rainend-01",
+    "file": "rainend-01.m4a",
+    "ms": 6800,
+    "text": "雨停了，空气格外清新，课间可以到走廊感受雨后的校园。"
+   },
+   {
+    "id": "rainend-02",
+    "file": "rainend-02.m4a",
+    "ms": 6320,
+    "text": "雨过天晴，操场恢复了干爽，欢迎同学们走出教室活动筋骨。"
+   },
+   {
+    "id": "rainend-03",
+    "file": "rainend-03.m4a",
+    "ms": 5200,
+    "text": "雨停啦，被洗过的树叶亮晶晶的，广播站祝你有好心情。"
+   },
+   {
+    "id": "rainend-04",
+    "file": "rainend-04.m4a",
+    "ms": 4800,
+    "text": "雨水退场，阳光返场。愿你的心情也跟着放晴。"
+   },
+   {
+    "id": "rainend-05",
+    "file": "rainend-05.m4a",
+    "ms": 7440,
+    "text": "雨后初霁，路面仍有积水，行走时请留意脚下。"
+   },
+   {
+    "id": "rainend-06",
+    "file": "rainend-06.m4a",
+    "ms": 6240,
+    "text": "雨停了，广播站提醒：值日同学请检查教室门窗是否关好。"
+   },
+   {
+    "id": "rainend-07",
+    "file": "rainend-07.m4a",
+    "ms": 9040,
+    "text": "一场雨过后，校园更绿了。课间不妨出去走走，呼吸新鲜空气。"
+   },
+   {
+    "id": "rainend-08",
+    "file": "rainend-08.m4a",
+    "ms": 6080,
+    "text": "雨过天青，户外活动恢复，注意地面湿滑，慢慢来。"
+   },
+   {
+    "id": "rainend-09",
+    "file": "rainend-09.m4a",
+    "ms": 6080,
+    "text": "雨停了，天空放晴，广播站祝同学们接下来的课程顺利。"
+   },
+   {
+    "id": "rainend-10",
+    "file": "rainend-10.m4a",
+    "ms": 6800,
+    "text": "雨后清凉，添衣防感冒，愿清爽的空气带来清爽的头脑。"
+   }
+  ],
+  "thunder": [
+   {
+    "id": "thunder-01",
+    "file": "thunder-01.m4a",
+    "ms": 6160,
+    "text": "雷声响起，请同学们远离窗口，暂停使用靠近窗户的电器。"
+   },
+   {
+    "id": "thunder-02",
+    "file": "thunder-02.m4a",
+    "ms": 5680,
+    "text": "打雷了，广播站安全提示：不要在大树和旗杆下停留。"
+   },
+   {
+    "id": "thunder-03",
+    "file": "thunder-03.m4a",
+    "ms": 4080,
+    "text": "雷雨来临，教室内安心学习是最好的选择。"
+   },
+   {
+    "id": "thunder-04",
+    "file": "thunder-04.m4a",
+    "ms": 8160,
+    "text": "听到雷声了吗？请关好门窗，等待这场雨过去。"
+   },
+   {
+    "id": "thunder-05",
+    "file": "thunder-05.m4a",
+    "ms": 5840,
+    "text": "雷雨天气，广播站提醒：体育课与户外活动将视天气调整。"
+   },
+   {
+    "id": "thunder-06",
+    "file": "thunder-06.m4a",
+    "ms": 5600,
+    "text": "雷声滚滚，别慌张，教室是最安全的地方。"
+   },
+   {
+    "id": "thunder-07",
+    "file": "thunder-07.m4a",
+    "ms": 6000,
+    "text": "雷雨提示：请勿接触金属栏杆，走廊靠内侧行走。"
+   },
+   {
+    "id": "thunder-08",
+    "file": "thunder-08.m4a",
+    "ms": 5760,
+    "text": "闪电与雷声交替，广播站提醒同学们留在室内，安静等待雨过。"
+   },
+   {
+    "id": "thunder-09",
+    "file": "thunder-09.m4a",
+    "ms": 5120,
+    "text": "雷雨天气安全第一，请听从老师安排，有序活动。"
+   },
+   {
+    "id": "thunder-10",
+    "file": "thunder-10.m4a",
+    "ms": 5040,
+    "text": "雷雨中的校园依然安静美好，愿铃声与书声很快回来。"
+   }
+  ],
+  "showannounce": [
+   {
+    "id": "showannounce-01",
+    "file": "showannounce-01.m4a",
+    "ms": 6880,
+    "text": "校园广播预告：音乐馆演出将于五分钟后开始，欢迎同学们前往欣赏。"
+   },
+   {
+    "id": "showannounce-02",
+    "file": "showannounce-02.m4a",
+    "ms": 8080,
+    "text": "广播站消息：五分钟后音乐馆有一场小型演出，期待你的到来。"
+   },
+   {
+    "id": "showannounce-03",
+    "file": "showannounce-03.m4a",
+    "ms": 7040,
+    "text": "音乐馆演出即将开始，还有五分钟，路过的话进来听一听吧。"
+   },
+   {
+    "id": "showannounce-04",
+    "file": "showannounce-04.m4a",
+    "ms": 6240,
+    "text": "温馨预告：五分钟后音乐馆开演，钢琴与歌声等你赴约。"
+   },
+   {
+    "id": "showannounce-05",
+    "file": "showannounce-05.m4a",
+    "ms": 6720,
+    "text": "校园演出预告：音乐馆五分钟后开场，带上好心情准时入座。"
+   },
+   {
+    "id": "showannounce-06",
+    "file": "showannounce-06.m4a",
+    "ms": 7360,
+    "text": "广播站通知：音乐馆演出进入倒计时，五分钟后与你不见不散。"
+   },
+   {
+    "id": "showannounce-07",
+    "file": "showannounce-07.m4a",
+    "ms": 11120,
+    "text": "演出预告：再过五分钟，音乐馆的舞台灯光就会亮起。"
+   },
+   {
+    "id": "showannounce-08",
+    "file": "showannounce-08.m4a",
+    "ms": 5200,
+    "text": "音乐馆即将开演，欢迎同学们课间前往，共享美妙时光。"
+   },
+   {
+    "id": "showannounce-09",
+    "file": "showannounce-09.m4a",
+    "ms": 6080,
+    "text": "校园广播：五分钟后音乐馆演出开始，前排好位置先到先得哦。"
+   },
+   {
+    "id": "showannounce-10",
+    "file": "showannounce-10.m4a",
+    "ms": 6720,
+    "text": "演出快开始了！五分钟后音乐馆见，一起为同学鼓掌。"
+   }
+  ],
+  "showstart": [
+   {
+    "id": "showstart-01",
+    "file": "showstart-01.m4a",
+    "ms": 8960,
+    "text": "演出现在开始！让我们把掌声送给登台的同学。"
+   },
+   {
+    "id": "showstart-02",
+    "file": "showstart-02.m4a",
+    "ms": 4640,
+    "text": "音乐馆演出正式开场，请欣赏今天的第一首歌。"
+   },
+   {
+    "id": "showstart-03",
+    "file": "showstart-03.m4a",
+    "ms": 4640,
+    "text": "灯光已亮，音乐响起，欢迎来到音乐馆演出现场。"
+   },
+   {
+    "id": "showstart-04",
+    "file": "showstart-04.m4a",
+    "ms": 6880,
+    "text": "演出开始啦，愿你在这几分钟里放松心情，享受旋律。"
+   },
+   {
+    "id": "showstart-05",
+    "file": "showstart-05.m4a",
+    "ms": 4080,
+    "text": "掌声有请！今天的演出正式开始。"
+   },
+   {
+    "id": "showstart-06",
+    "file": "showstart-06.m4a",
+    "ms": 4240,
+    "text": "音乐馆舞台已就绪，第一首曲目即将响起。"
+   },
+   {
+    "id": "showstart-07",
+    "file": "showstart-07.m4a",
+    "ms": 4400,
+    "text": "演出开始，请把脚步放轻，把掌声准备好。"
+   },
+   {
+    "id": "showstart-08",
+    "file": "showstart-08.m4a",
+    "ms": 4080,
+    "text": "开演时刻：让音乐说话，让掌声回答。"
+   },
+   {
+    "id": "showstart-09",
+    "file": "showstart-09.m4a",
+    "ms": 5680,
+    "text": "同学们，演出开始了，竖起耳朵，好戏登场。"
+   },
+   {
+    "id": "showstart-10",
+    "file": "showstart-10.m4a",
+    "ms": 4560,
+    "text": "欢迎来到音乐馆，今天的演出现在开始。"
+   }
+  ],
+  "showend": [
+   {
+    "id": "showend-01",
+    "file": "showend-01.m4a",
+    "ms": 4480,
+    "text": "今天的演出到这里就结束了，感谢每一位倾听的你。"
+   },
+   {
+    "id": "showend-02",
+    "file": "showend-02.m4a",
+    "ms": 6640,
+    "text": "演出圆满结束，把最热烈的掌声送给台上的同学。"
+   },
+   {
+    "id": "showend-03",
+    "file": "showend-03.m4a",
+    "ms": 5360,
+    "text": "音乐渐歇，掌声不息。我们下场演出再见。"
+   },
+   {
+    "id": "showend-04",
+    "file": "showend-04.m4a",
+    "ms": 6000,
+    "text": "感谢欣赏，愿旋律伴你走回教室。广播站与你下次再会。"
+   },
+   {
+    "id": "showend-05",
+    "file": "showend-05.m4a",
+    "ms": 5360,
+    "text": "本场演出到此结束，谢谢大家的聆听与陪伴。"
+   },
+   {
+    "id": "showend-06",
+    "file": "showend-06.m4a",
+    "ms": 5840,
+    "text": "演出结束啦，意犹未尽的话，记得关注下一场时间。"
+   },
+   {
+    "id": "showend-07",
+    "file": "showend-07.m4a",
+    "ms": 4480,
+    "text": "谢谢台上的同学，也谢谢安静聆听的你们。下次见。"
+   },
+   {
+    "id": "showend-08",
+    "file": "showend-08.m4a",
+    "ms": 4320,
+    "text": "音乐会落幕，愿好心情延续到每一节课。"
+   },
+   {
+    "id": "showend-09",
+    "file": "showend-09.m4a",
+    "ms": 6400,
+    "text": "演出到此结束，请同学们有序离场，注意脚下安全。"
+   },
+   {
+    "id": "showend-10",
+    "file": "showend-10.m4a",
+    "ms": 4160,
+    "text": "感谢观看，广播站期待与你在下一场演出重逢。"
+   }
+  ]
+ }
+}

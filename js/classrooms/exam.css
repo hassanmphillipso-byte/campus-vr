@@ -1,0 +1,110 @@
+@import url('./adventure.css');
+/* The scene fills the screen; the lobby exposes choices before an attempt. */
+#workstation.exam-mode{padding:0;background:#152326;backdrop-filter:none;display:block;overflow:hidden}
+.exam-mode>.workShell{display:none}
+.examActive>header,.examActive>footer,.examActive #notice{display:none!important}
+.examActive #castOptions,.examActive #hud,.examActive #crosshair,.examActive #touchMove,.examActive #touchLook,.examActive #touchActions,.examActive #interactBtn,.examActive #roomInfo,.examActive #returnWork,.examActive #toast{display:none!important}
+.examRoot{--ex-accent:#d9e9b8;--ex-surface:#172824;--ex-line:#ffffff30;color:#f7f7ee;position:relative;width:100%;height:100dvh;overflow:hidden;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.exam-2{--ex-accent:#f4d397;--ex-surface:#252c35}
+.exam-3{--ex-accent:#a8e2de;--ex-surface:#1b2c35}
+.examRoot *{box-sizing:border-box}
+.examRoot [hidden]{display:none!important}
+.examScene,.examViewport{position:absolute;inset:0;width:100%;height:100%}
+.examViewport canvas{display:block;max-width:100%;pointer-events:none}
+.examScene:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 55%,#09191665)}
+.examRoot button{font-family:inherit;font-size:15px;font-weight:500;line-height:1.4;min-height:48px;padding:12px 22px;border:1px solid var(--ex-line);border-radius:12px;color:#f7f7ee;background:var(--ex-surface);cursor:pointer;transition:background .15s,transform .15s}
+.examRoot button:hover{border-color:#ffffff88;background:#344941}
+.examRoot button:active{transform:translateY(1px)}
+.examRoot button:disabled{opacity:.45;cursor:default}
+.examRoot button:focus-visible,.examRoot summary:focus-visible{outline:3px solid #ffe294;outline-offset:4px}
+.examRoot .examPrimary{background:var(--ex-accent);color:#172824;border-color:transparent}
+.examRoot .examPrimary:hover{background:var(--ex-accent);filter:brightness(1.07)}
+.examRoot .examMenu{position:absolute;bottom:clamp(48px,12vh,130px);left:50%;transform:translateX(-50%);display:grid;gap:12px;width:min(240px,70vw)}
+.examMenu button{font-size:18px;letter-spacing:.12em;min-height:56px;box-shadow:0 4px 30px #0a171930}
+.examCorner{position:absolute;right:max(22px,env(safe-area-inset-right));top:max(20px,env(safe-area-inset-top))}
+.examSceneActions{position:absolute;bottom:max(32px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;gap:10px}
+.examSceneActions .examPrimary{min-width:150px}
+.examTaskShade{position:absolute;inset:0;z-index:2;background:#0b1a204d;display:grid;place-items:center;padding:72px 20px 24px;backdrop-filter:blur(5px)}
+/* 题面为模态：打开期间角落退出键不可点（防误触退出考场），同步隐藏避免"可见但点不动" */
+.examRoot:has(.examTaskShade) .examCorner{display:none}
+.examTask{position:relative;width:min(510px,100%);max-height:100%;overflow:auto;padding:30px;border:1px solid var(--ex-line);border-radius:22px;background:var(--ex-surface);box-shadow:0 20px 80px #06141760}
+.examTask h2{font-size:clamp(18px,2vw,23px);line-height:1.5;font-weight:600;margin:10px 30px 18px 0}
+.examRoot .examTaskClose{position:absolute;top:8px;right:8px;width:44px;min-height:44px;padding:0;border:none;background:transparent;font-size:25px}
+.examCode{font:14px/1.7 Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;color:#d4e9de;background:#00000025;padding:16px;border-radius:10px;margin:0 0 18px}
+.examChoices{display:grid;gap:8px}
+.examChoices button{text-align:left}
+.examChoices .picked{border-color:var(--ex-accent);background:#ffffff18;box-shadow:inset 3px 0 var(--ex-accent)}
+.examRoot .examAnswer{width:100%;margin-top:20px}
+.examRoot[data-phase="result"]{overflow:auto;background:var(--ex-surface)}
+.examRoot[data-phase="result"] .examScene{opacity:.13;position:fixed;pointer-events:none}
+.examResults{position:relative;max-width:660px;margin:0 auto;padding:48px 28px 64px;min-height:100%;line-height:1.75}
+.examResults h1{font-size:30px;font-weight:600;margin:0 0 6px}
+.examResultMeta,.examHint{font-size:13px;color:#c6d5d0}
+.examStamp{padding:28px 0 24px;border-bottom:1px solid var(--ex-line);margin-bottom:22px}
+.examStamp strong{display:block;font:54px/1.25 Menlo,monospace;color:var(--ex-accent)}
+.examStamp span{font-size:14px}
+.examResults>button{width:100%;margin-top:12px}
+.examReview,.examSettings{border:1px solid var(--ex-line);border-radius:12px;margin:18px 0;padding:0 18px}
+.examRoot summary{cursor:pointer;padding:14px 0;min-height:48px}
+.examReview article{padding:12px 0;border-top:1px solid var(--ex-line)}
+.examReview h2{font-size:17px;margin:0}
+.examReview p,.examSettings p{font-size:14px}
+.examLevels{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px}
+.examLevels button{flex:1;padding:10px}
+.examRoot .examLevels .selected,.examRoot .examLevels .selected:hover{background:var(--ex-accent);color:#172824}
+.examSettings .sportLaunch{width:100%}
+.submitted{color:var(--ex-accent)}
+.examSaveStatus{position:absolute;z-index:5;bottom:76px;left:50%;transform:translateX(-50%);width:min(520px,90%);margin:0;padding:14px;background:#602c21;border:1px solid #dca68c;border-radius:10px;font-size:14px}
+.examSaveRetry{position:absolute;z-index:5;bottom:16px;left:50%;transform:translateX(-50%)}
+.examRoot[data-phase="home"]{overflow:auto}
+.examRoot[data-phase="home"] .examScene{position:fixed;opacity:.5;pointer-events:none}
+.examLobby{position:relative;width:min(700px,calc(100% - 32px));margin:32px auto;padding:28px;background:var(--ex-surface);border:1px solid var(--ex-line);border-radius:20px;box-shadow:0 20px 70px #06141760;line-height:1.6}
+.examLobby h1{font-size:28px;margin:8px 0}
+.examLobby h2{font-size:17px;margin:20px 0 10px}
+.examLobby>small{color:var(--ex-accent)}
+.examModeCards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.examRoot .examModeCard{text-align:left;display:grid;gap:8px;align-content:start;padding:16px}
+.examModeCard strong{font-size:17px}.examModeCard span{font-size:14px;color:#d8e5e0}
+.examRoot .examModeCard[aria-pressed="true"]{border:2px solid var(--ex-accent);background:#ffffff12;padding:15px;box-shadow:inset 0 3px var(--ex-accent)}
+.examCurrent{color:var(--ex-accent);font-weight:600}
+.examLobby>.examStart,.examLobby>.sportLaunch,.examLobby>.examExit{width:100%;margin-top:8px}
+.examLobby .examHint{font-size:14px}.examSportRecord{font-size:14px}
+@media(max-width:600px){.examLobby{margin:16px auto;padding:20px}.examModeCards{grid-template-columns:1fr}.examLobby h1{font-size:24px}}
+@media(max-width:600px){.examTaskShade{padding:68px 14px 18px}.examTask{padding:22px 20px;border-radius:18px}.examCode{font-size:13px}.examResults{padding:32px 22px 48px}.examCorner{top:14px;right:14px}.examRoot .examMenu{bottom:12vh}.examTask h2{font-size:18px}.examRoot button{min-height:48px}.examSceneActions{bottom:24px}}
+@media(prefers-reduced-motion:reduce){.examRoot *{transition:none!important;animation:none!important}}
+
+.examAppliedPath{padding:14px 18px;background:#dce9df;border-left:4px solid #26715b;border-radius:6px;font-weight:600;line-height:1.7;color:#1c3a31}
+
+.examLobby>.examSaveStatus,.examResults>.examSaveStatus,.examLobby>.examSaveRetry,.examResults>.examSaveRetry{position:static;transform:none;width:100%;margin-top:12px}.examSaveStatus{pointer-events:none}
+
+/* ---- v2 扩充题型：填空与模拟电脑编程 ---- */
+.examBlankWrap{display:grid;gap:8px;margin:0 0 16px}
+.examBlankLabel{font-size:13px;color:#c6d5d0}
+.examBlankInput{width:100%;min-height:50px;padding:12px 16px;font:17px/1.4 Menlo,Consolas,monospace;color:#f4f9ef;background:#0d1a17;border:1px solid #ffffff45;border-radius:12px}
+.examBlankInput:focus-visible{outline:3px solid #ffe294}
+.examCorrectionInput{min-height:44px;max-width:220px;margin:8px 0}
+.examCorrection .examCorrectionChoice{margin-right:8px}
+/* 模拟电脑：显示器外框 + 行号编辑器 + 控制台 */
+.examComputer{border:1px solid #ffffff30;border-radius:16px;overflow:hidden;background:#0a1412;box-shadow:0 12px 44px #06141770;margin:0 0 16px}
+.examPcBar{display:flex;align-items:center;gap:10px;padding:9px 14px;background:#13221e;border-bottom:1px solid #ffffff22}
+.examPcDots{display:inline-flex;gap:6px}
+.examPcDots i{width:11px;height:11px;border-radius:50%}
+.examPcTitle{font:12px/1 Menlo,Consolas,monospace;color:#9fb8ac;letter-spacing:.04em}
+.examEditorWrap{display:flex;background:#0d1a17;max-height:min(300px,42vh)}
+.examGutter{flex:0 0 44px;padding:12px 6px 12px 0;font:14px/1.6 Menlo,Consolas,monospace;color:#4f6f63;text-align:right;background:#0a1310;border-right:1px solid #ffffff14;white-space:pre;overflow:hidden;user-select:none}
+.examEditor{flex:1;min-height:150px;max-height:min(300px,42vh);padding:12px 12px 12px 10px;font:14px/1.6 Menlo,Consolas,monospace;color:#cde8d6;background:transparent;border:none;outline:none;resize:vertical;white-space:pre;overflow:auto;tab-size:4}
+.examEditor:focus-visible{outline:2px solid #d9e9b8;outline-offset:-2px}
+.examConsole{min-height:64px;max-height:130px;overflow:auto;padding:10px 14px;background:#081210;border-top:1px solid #ffffff14}
+.examConsoleHint{font-size:13px;color:#7fa295}
+.examConsoleOut{margin:0;font:14px/1.6 Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;color:#cde8d6}
+.examConsoleOut.ok{color:#b9e8a6}
+.examConsoleOut.err{color:#f0b09a}
+.examCodeActions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:560px){
+  .examCodeActions{grid-template-columns:1fr}
+  .examEditor,.examGutter{font-size:13px}
+  .examGutter{flex-basis:34px}
+}
+.examMore{margin-top:14px;border-top:1px solid #ffffff22;padding-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.examMore button{font-size:12px;padding:7px 12px;opacity:.72;background:transparent;border:1px solid #ffffff33;color:#c6d5d0}
+.examMore button:hover{opacity:1}

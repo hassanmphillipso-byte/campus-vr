@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动作捕捉 · 阳光小学校园</title>
+<style>
+  body{margin:0;font:14px/1.6 "PingFang SC",sans-serif;background:#101622;color:#e8ecf2;display:flex;min-height:100vh}
+  #left{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px}
+  #right{flex:1;padding:18px;display:flex;flex-direction:column}
+  h1{font-size:20px;margin:0} h1 small{font-weight:400;color:#8fa2b8}
+  .card{background:#182234;border-radius:12px;padding:12px}
+  video,#ov{width:100%;border-radius:10px;background:#000;display:block}
+  #ov{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px)}
+  #vidwrap{position:relative}
+  #gl{width:100%;height:420px;border-radius:10px;background:#0b0f18}
+  button{background:#2f66ad;color:#fff;border:0;border-radius:10px;padding:10px 18px;font-size:15px;cursor:pointer;margin-right:8px}
+  button.rec{background:#c0392b} button:disabled{background:#3a4658;color:#7c8aa0;cursor:not-allowed}
+  #log{font-size:12px;color:#9fb2c8;max-height:130px;overflow:auto;white-space:pre-wrap}
+  #bar{height:8px;background:#0b0f18;border-radius:4px;overflow:hidden}
+  #barf{height:100%;width:0;background:#35e0a1}
+  .hint{color:#8fa2b8;font-size:12px}
+  a{color:#6db3ff}
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/build/three.module.js",
+  "three/addons/": "./vendor/three/addons/"
+} }
+</script>
+</head>
+<body>
+<div id="left">
+  <h1>🎬 动作捕捉 <small>— 对着摄像头做动作，变成校园里 NPC 的动画</small></h1>
+  <div class="card">
+    <div id="vidwrap"><video id="vid" playsinline muted></video><canvas id="ov"></canvas></div>
+    <div style="margin-top:10px">
+      <button id="btnCam">① 打开摄像头</button>
+      <button id="btnRec" class="rec" disabled>② 开始录制（最长 16 秒）</button>
+      <button id="btnSave" disabled>③ 保存到校园</button>
+    </div>
+    <div id="bar" style="margin-top:10px"><div id="barf"></div></div>
+    <div class="hint" id="stat">先打开摄像头 → 站进画面让全身入镜 → 点开始录制 → 做动作 → 自动停止后点保存 → 点击校园动作预览。</div>
+  </div>
+  <div class="card">
+    <b>角色预览</b>（实时跟随你的动作）
+    <select id="charSel" style="margin:6px 0">
+      <option value="Boy_A">男生·白衬衫</option><option value="Boy_B">男生·蓝衬衫</option><option value="Boy_C">男生·灰polo</option>
+      <option value="Girl_A">女生·白衬衫</option><option value="Girl_B">女生·蓝衬衫</option><option value="Girl_C">女生·灰polo</option>
+      <option value="Man_Teacher">男老师</option><option value="Woman_Teacher">女老师</option>
+    </select>
+    <div class="hint"><label><input type="checkbox" id="mirror" checked> 镜像（推荐：像照镜子一样对齐动作）</label></div>
+  </div>
+  <div class="card" id="logcard">日志<div id="log"></div></div>
+</div>
+<div id="right"><div class="card" style="flex:1;display:flex;flex-direction:column"><canvas id="gl"></canvas>
+  <div class="hint" style="margin-top:8px">保存后：打开 <a href="./?mocap=1">校园动作预览</a>——广场队员会展示你录的动作。普通校园使用自然动作。
+  也可 <a href="#" id="dl">下载 JSON 备份</a>（高级：放入 assets/anims/mocap1.json）。</div>
+</div></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { FilesetResolver, PoseLandmarker } from './vendor/mediapipe/vision_bundle.mjs';
+
+const log = (...a) => { const d = document.getElementById('log'); d.textContent += a.join(' ') + '\n'; d.scrollTop = 1e9; };
+const stat = s => document.getElementById('stat').textContent = s;
+const $ = id => document.getElementById(id);
+
+/* ---------- 3D 预览 ---------- */
+const renderer = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: true });
+renderer.setPixelRatio(devicePixelRatio);
+renderer.shadowMap.enabled = true;
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0b0f18);
+const camera3 = new THREE.PerspectiveCamera(50, 2, 0.1, 100);
+camera3.position.set(0, 1.1, 3.2); camera3.lookAt(0, 0.85, 0);
+scene.add(new THREE.HemisphereLight(0xcfe4ff, 0x334455, 1.2));
+const dl = new THREE.DirectionalLight(0xffffff, 2.2); dl.position.set(2, 4, 3); dl.castShadow = true; scene.add(dl);
+const ground = new THREE.Mesh(new THREE.CircleGeometry(4, 40), new THREE.MeshStandardMaterial({ color: 0x1a2334 }));
+ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; scene.add(ground);
+
+/* ---------- KayKit 角色 + 骨架 ---------- */
+const gltfLoader = new GLTFLoader();
+let model = null, bones = {}, restDir = {}, restWQ = {}, parentRestWQ = {}, idleMixer = null;
+const TRACKED = ['lArm', 'rArm', 'lFore', 'rFore', 'lThigh', 'rThigh', 'lShin', 'rShin'];
+function loadChar(name) {
+  gltfLoader.load('./assets/characters_hs/' + name + '.glb', g => {
+    if (model) scene.remove(model);
+    model = g.scene;
+    model.traverse(o => { if (o.isMesh) { o.castShadow = true; } });
+    scene.add(model);
+    model.updateMatrixWorld(true);
+    bones = {}; restDir = {}; restWQ = {}; parentRestWQ = {};
+    model.traverse(o => {
+      if (!o.isBone) return;
+      const lo = o.name.toLowerCase();
+      if (/^(control|IK|heel|knee|elbow|handIK|toe)/i.test(o.name)) return;
+      const L = /l$/.test(lo), R = /r$/.test(lo);
+      if (/lowerarm|forearm/.test(lo)) { if (L) bones.lFore = o; if (R) bones.rFore = o; }
+      else if (/upperarm|^arm/.test(lo)) { if (L) bones.lArm = o; if (R) bones.rArm = o; }
+      else if (/^hand/.test(lo)) { if (L) bones.lHand = o; if (R) bones.rHand = o; }
+      else if (/upperleg|thigh/.test(lo)) { if (L) bones.lThigh = o; if (R) bones.rThigh = o; }
+      else if (/lowerleg|shin|calf/.test(lo)) { if (L) bones.lShin = o; if (R) bones.rShin = o; }
+    });
+    const wp = b => b.getWorldPosition(new THREE.Vector3());
+    const chain = (a, b, key) => { restDir[key] = wp(b).sub(wp(a)).normalize(); };
+    if (bones.lArm && bones.lFore) chain(bones.lArm, bones.lFore, 'lArm');
+    if (bones.rArm && bones.rFore) chain(bones.rArm, bones.rFore, 'rArm');
+    if (bones.lFore && bones.lHand) chain(bones.lFore, bones.lHand, 'lFore');
+    if (bones.rFore && bones.rHand) chain(bones.rFore, bones.rHand, 'rFore');
+    if (bones.lThigh && bones.lShin) chain(bones.lThigh, bones.lShin, 'lThigh');
+    if (bones.rThigh && bones.rShin) chain(bones.rThigh, bones.rShin, 'rThigh');
+    if (bones.lShin) { const f = model.getObjectByName('footl'); if (f) chain(bones.lShin, f, 'lShin'); }
+    if (bones.rShin) { const f = model.getObjectByName('footr'); if (f) chain(bones.rShin, f, 'rShin'); }
+    for (const k of TRACKED) if (bones[k]) {
+      restWQ[k] = bones[k].getWorldQuaternion(new THREE.Quaternion());
+      parentRestWQ[k] = bones[k].parent.getWorldQuaternion(new THREE.Quaternion());
+    }
+    // Idle 混音器（保存时给未跟踪骨采样基底）
+    if (idleMixer) idleMixer.stopAllAction();
+    const idle = g.animations.find(a => /^(Idle|Man_Idle|Woman_Idle|Female_Idle)$/.test(a.name));
+    idleMixer = new THREE.AnimationMixer(model);
+    if (idle) idleMixer.clipAction(idle).play();
+    log('[char] ' + name + ' 装载，骨链就绪');
+  }, undefined, e => log('[char] 加载失败', e));
+}
+loadChar('Boy_A');
+$('charSel').onchange = e => loadChar(e.target.value);
+
+/* ---------- MediaPipe（本地 vendor 优先，云端/缺失时回退 CDN） ---------- */
+let landmarker = null;
+const MP_CDN = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm';
+const MODEL_URL = 'https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task';
+async function initMP() {
+  try {
+    const vision = await FilesetResolver.forVisionTasks('./vendor/mediapipe/');
+    landmarker = await PoseLandmarker.createFromOptions(vision, {
+      baseOptions: { modelAssetPath: './vendor/mediapipe/pose_landmarker_lite.task', delegate: 'CPU' },
+      runningMode: 'VIDEO', numPoses: 1,
+    });
+    log('[mp] PoseLandmarker 就绪（本地模型）');
+  } catch (e1) {
+    log('[mp] 本地模型不可用，回退 CDN：', e1.message);
+    try {
+      const vision = await FilesetResolver.forVisionTasks(MP_CDN);
+      const buf = await (await fetch(MODEL_URL)).arrayBuffer();
+      landmarker = await PoseLandmarker.createFromOptions(vision, {
+        baseOptions: { modelAssetBuffer: new Uint8Array(buf), delegate: 'CPU' },
+        runningMode: 'VIDEO', numPoses: 1,
+      });
+      log('[mp] PoseLandmarker 就绪（CDN 模型）');
+    } catch (e2) { log('[mp] 初始化彻底失败：', e2.message); }
+  }
+}
+initMP();
+
+/* ---------- 摄像头 ---------- */
+let camOn = false;
+$('btnCam').onclick = async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480 }, audio: false });
+    $('vid').srcObject = stream; await $('vid').play();
+    camOn = true; $('btnRec').disabled = false;
+    stat('摄像头已打开。全身入镜后点「开始录制」，做 10~16 秒动作（跳绳/体操/跳舞都行）。');
+  } catch (e) { stat('摄像头打开失败：' + e.message); }
+};
+
+/* ---------- 骨架叠加绘制 ---------- */
+const ov = $('ov'), oc = ov.getContext('2d');
+const BONES = [[11,12],[11,13],[13,15],[12,14],[14,16],[11,23],[12,24],[23,24],[23,25],[25,27],[24,26],[26,28]];
+function drawLM(lm, w, h) {
+  ov.width = w; ov.height = h; oc.clearRect(0, 0, w, h);
+  if (!lm) return;
+  oc.strokeStyle = 'rgba(53,224,161,.9)'; oc.lineWidth = 3;
+  for (const [a, b] of BONES) { oc.beginPath(); oc.moveTo(lm[a].x * w, lm[a].y * h); oc.lineTo(lm[b].x * w, lm[b].y * h); oc.stroke(); }
+  for (const p of lm) { oc.fillStyle = '#ffd23c'; oc.beginPath(); oc.arc(p.x * w, p.y * h, 3, 0, 7); oc.fill(); }
+}
+
+/* ---------- 重定向：landmarks(米制世界) → KayKit 骨局部四元数 ---------- */
+const _pa = new THREE.Vector3(), _pb = new THREE.Vector3(), _dir = new THREE.Vector3(), _sq = new THREE.Quaternion(), _tq = new THREE.Quaternion();
+function retargetFrame(wl, mirror) {
+  const P = (i, out) => out.set(wl[i].x * (mirror ? -1 : 1), -wl[i].y, -wl[i].z);
+  const out = {};
+  const M = mirror
+    ? { lArm: [12, 14], rArm: [11, 13], lFore: [14, 16], rFore: [13, 15], lThigh: [24, 26], rThigh: [23, 25], lShin: [26, 28], rShin: [25, 27] }
+    : { lArm: [11, 13], rArm: [12, 14], lFore: [13, 15], rFore: [14, 16], lThigh: [23, 25], rThigh: [24, 26], lShin: [25, 27], rShin: [26, 28] };
+  for (const k of TRACKED) {
+    const b = bones[k]; if (!b || !restDir[k]) continue;
+    const [a, c] = M[k];
+    P(a, _pa); P(c, _pb);
+    _dir.copy(_pb).sub(_pa);
+    if (_dir.lengthSq() < 1e-6) { out[k] = null; continue; }
+    _dir.normalize();
+    _sq.setFromUnitVectors(restDir[k], _dir);
+    _tq.copy(_sq).multiply(restWQ[k]);
+    out[k] = parentRestWQ[k].clone().invert().multiply(_tq);
+  }
+  return out;
+}
+
+/* ---------- 录制 ---------- */
+const FPS = 24, MAXDUR = 16;
+let rec = null;   // {frames:[{t, q:{bone:Quat}}], t0}
+$('btnRec').onclick = () => {
+  rec = { frames: [], t0: performance.now() };
+  $('btnRec').disabled = true; $('btnSave').disabled = true;
+  stat('录制中…… 尽情做动作！');
+};
+function pushFrame(qs) {
+  const t = (performance.now() - rec.t0) / 1000;
+  rec.frames.push({ t, q: qs });
+  $('barf').style.width = Math.min(100, t / MAXDUR * 100) + '%';
+  if (t >= MAXDUR) stopRec();
+}
+function stopRec() {
+  // 压缩：只保留有效骨帧
+  $('barf').style.width = '100%';
+  $('btnRec').disabled = false; $('btnSave').disabled = false;
+  stat('录制完成（' + rec.frames.length + ' 帧 / ' + ((rec.frames.at(-1)?.t) || 0).toFixed(1) + ' 秒）。点「保存到校园」→ 打开校园动作预览生效。');
+  rec.done = true;
+}
+
+/* ---------- 保存：合并 Idle 基底 → localStorage + 下载 ---------- */
+$('btnSave').onclick = () => {
+  if (!rec || !rec.frames.length) return;
+  const dur = rec.frames.at(-1).t;
+  const allBones = [];
+  model.traverse(o => { if (o.isBone && !/^(control|IK|heel|knee|elbow|handIK|toe)/i.test(o.name)) allBones.push(o); });
+  const tracks = [];
+  for (const b of allBones) {
+    const tracked = TRACKED.some(k => bones[k] === b);
+    const times = [], quats = [];
+    for (let i = 0; i < rec.frames.length; i++) {
+      const f = rec.frames[i];
+      let q = null;
+      if (tracked) q = f.q[TRACKED.find(k => bones[k] === b)];
+      if (!q) {                                     // 未跟踪骨：采 Idle 基底（循环）
+        try { if (idleMixer) { idleMixer.setTime(f.t % Math.max(0.5, idleMixer.time || 2)); idleMixer.update(0); } } catch (e) {}
+        q = b.quaternion.clone();
+      }
+      times.push(+f.t.toFixed(3));
+      quats.push(+q.x.toFixed(4), +q.y.toFixed(4), +q.z.toFixed(4), +q.w.toFixed(4));
+    }
+    tracks.push({ name: b.name + '.quaternion', times, quats });
+  }
+  const data = { v: 1, fps: FPS, duration: +dur.toFixed(2), tracks };
+  const json = JSON.stringify(data);
+  try {
+    localStorage.setItem('campusMocap1', json);
+    stat('✅ 已保存到校园（' + (json.length / 1024).toFixed(0) + 'KB）。点击「校园动作预览」即可查看你录的动作！');
+    log('[save] localStorage ok, ' + tracks.length + ' tracks');
+  } catch (e) { stat('保存失败（空间不足？）：' + e.message); }
+  const blob = new Blob([json], { type: 'application/json' });
+  $('dl').href = URL.createObjectURL(blob); $('dl').download = 'mocap1.json';
+};
+
+/* ---------- 主循环 ---------- */
+const vid = $('vid');
+let lastVT = -1;
+const clock = { t: performance.now() };
+function loop() {
+  requestAnimationFrame(loop);
+  const now = performance.now(); const dt = Math.min(0.05, (now - clock.t) / 1000); clock.t = now;
+  let lm = null, wl = null;
+  if (landmarker && camOn && vid.readyState >= 2 && vid.currentTime !== lastVT) {
+    lastVT = vid.currentTime;
+    try { const r = landmarker.detectForVideo(vid, now); if (r.worldLandmarks?.length) { wl = r.worldLandmarks[0]; lm = r.landmarks[0]; } } catch (e) {}
+  }
+  if (vid.videoWidth) drawLM(lm, ov.clientWidth || 640, ov.clientHeight || (ov.clientWidth * vid.videoHeight / vid.videoWidth));
+  // 测试模式（无摄像头）：合成摆臂
+  if (location.search.includes('test=1') && !rec) { $('btnRec').click(); }
+  if (location.search.includes('test=1') && rec && !rec.done) {
+    const t = (now - rec.t0) / 1000;
+    const swing = Math.sin(t * 3.2) * 1.9;
+    const mk = (x, y, z) => ({ x, y, z });
+    const L = (i, x, y, z) => { wl = wl || {}; wl[i] = mk(x, y, z); };
+    // 简易火柴人（米制，肩 y=-0.6）
+    const shL = [-0.20, -0.60, 0], shR = [0.20, -0.60, 0], hip = [0, -0.95, 0];
+    const elL = [shL[0] - 0.02, shL[1] - 0.26 * Math.cos(swing), shL[2] + 0.26 * Math.sin(swing)];
+    const wrL = [elL[0] - 0.02, elL[1] - 0.25 * Math.cos(swing * 1.2), elL[2] + 0.25 * Math.sin(swing * 1.2)];
+    const elR = [shR[0] + 0.02, shR[1] - 0.26 * Math.cos(-swing), shR[2] + 0.26 * Math.sin(-swing)];
+    const wrR = [elR[0] + 0.02, elR[1] - 0.25 * Math.cos(-swing * 1.2), elR[2] + 0.25 * Math.sin(-swing * 1.2)];
+    const knL = [-0.10, hip[1] - 0.40, 0], anL = [-0.10, knL[1] - 0.40, 0.02 * Math.sin(t * 4)];
+    const knR = [0.10, hip[1] - 0.40, 0], anR = [0.10, knR[1] - 0.40, -0.02 * Math.sin(t * 4)];
+    const all = { 11: shL, 12: shR, 13: elL, 14: elR, 15: wrL, 16: wrR, 23: [hip[0] - 0.10, hip[1], 0], 24: [hip[0] + 0.10, hip[1], 0], 25: knL, 26: knR, 27: anL, 28: anR };
+    for (const k in all) L(k, all[k][0], all[k][1], all[k][2]);
+    lm = Object.keys(all).map(k => ({ x: 0.5 + all[k][0], y: 0.5 + all[k][1] * -1 + 0.3, z: 0 }));
+  }
+  if (wl && model) {
+    const qs = retargetFrame(wl, $('mirror').checked);
+    for (const k of TRACKED) if (qs[k] && bones[k]) bones[k].quaternion.copy(qs[k]);
+    if (rec && !rec.done) pushFrame(qs);
+  }
+  if (idleMixer && !(rec && !rec.done)) idleMixer.update(dt);   // 未录制时播 Idle
+  // 预览渲染尺寸
+  const r = $('gl').getBoundingClientRect();
+  if (r.width && (renderer.domElement.width !== r.width * devicePixelRatio | 0)) {
+    renderer.setSize(r.width, r.width * 0.75, false);
+    camera3.aspect = 4 / 3; camera3.updateProjectionMatrix();
+  }
+  renderer.render(scene, camera3);
+}
+loop();
+log('说明：本页所有计算都在本机浏览器完成，不上传任何画面。');
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>进度清零 · 阳光中学</title><style>body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;max-width:560px;margin:10vh auto;padding:0 24px;color:#183f31;line-height:1.9;background:#f7f9f3}h1{font-size:24px}button{padding:14px 30px;font-size:16px;cursor:pointer;border:none;border-radius:10px;background:#2b6e5a;color:#fff}button:disabled{background:#9db8ae}a.btn{display:inline-block;padding:13px 26px;font-size:16px;border-radius:10px;background:#fff;color:#2b6e5a;text-decoration:none;border:1px solid #d5e0d8}pre{background:#eef3ec;padding:14px;border-radius:10px;font-size:13px;white-space:pre-wrap;max-height:40vh;overflow:auto}</style></head><body>
+<h1>进度清零</h1>
+<p>此页面清空<b>本机浏览器</b>里的校园存档：金币与校园建设、编程练习、体育训练与考试、回放记录等，全部恢复初始状态。只影响本机，不影响其他人的进度。</p>
+<p><button id="go">确认清零</button>&nbsp;&nbsp;<a class="btn" href="./">不清零，直接进入校园</a></p>
+<pre id="out" hidden></pre>
+<script>
+document.getElementById('go').onclick=()=>{
+  const removed=[];
+  for(let i=localStorage.length-1;i>=0;i--){
+    const k=localStorage.key(i);
+    if(k&&k.startsWith('campus')){removed.push(k);localStorage.removeItem(k);}
+  }
+  const out=document.getElementById('out');out.hidden=false;
+  out.textContent=removed.length?('已清空 '+removed.length+' 项：\n'+removed.join('\n')):'本机本来就是全新状态，没有可清的存档。';
+  const b=document.getElementById('go');b.textContent='已清零 ✓';b.disabled=true;
+};
+</script></body></html>
